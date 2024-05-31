@@ -20,7 +20,7 @@ public class HealthSystem : MonoBehaviour
     {
         if (_health <= 0)
         {
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("GameOver");
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

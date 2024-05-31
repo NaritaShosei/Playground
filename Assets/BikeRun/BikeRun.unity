@@ -814,6 +814,7 @@ GameObject:
   - component: {fileID: 1568094909}
   - component: {fileID: 1568094908}
   - component: {fileID: 1568094906}
+  - component: {fileID: 1568094911}
   m_Layer: 0
   m_Name: GOAL
   m_TagString: Untagged
@@ -961,6 +962,18 @@ Transform:
   - {fileID: 1061019441}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1568094911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568094904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468c8630b441e02469aa3a5e99c27a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1858140952
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,7 +993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1858140953
 MonoBehaviour:
   m_ObjectHideFlags: 0
