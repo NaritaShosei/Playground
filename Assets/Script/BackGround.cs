@@ -24,22 +24,22 @@ public class BackGround : MonoBehaviour
         {
             _backGround1.transform.position = _startVec;
         }
-        /*if (_backGround2.transform.position.y < _endVec.y)
+        if (_backGround2.transform.position.y < _endVec.y)
         {
             _backGround2.transform.position = _startVec;
         }
         if (_backGround3.transform.position.y < _endVec.y)
         {
             _backGround3.transform.position = _startVec;
-        }*/
+        }
 
 
     }
     private void FixedUpdate()
     {
         _backGround1.transform.position += Vector3.down * _backGroundSpeed;
-        /*_backGround2.transform.position += Vector3.down * _backGroundSpeed;
-        _backGround3.transform.position += Vector3.down * _backGroundSpeed;*/
+        _backGround2.transform.position += Vector3.down * _backGroundSpeed;
+        _backGround3.transform.position += Vector3.down * _backGroundSpeed;
     }
 
 }
