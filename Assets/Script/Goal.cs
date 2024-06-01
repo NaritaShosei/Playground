@@ -15,7 +15,7 @@ public class Goal : MonoBehaviour
     void Update()
     {
         Rigidbody2D goalrb = GetComponent<Rigidbody2D>();
-        goalrb.velocity = new Vector2(0,-20);
+        goalrb.velocity = new Vector2(0,-30);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
