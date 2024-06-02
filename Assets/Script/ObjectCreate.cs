@@ -10,6 +10,8 @@ public class ObjectCreate : MonoBehaviour
     [SerializeField] GameObject _prefubs;
     [SerializeField] List<Transform> _transforms = new List<Transform>();
     [SerializeField] float spawnrange = 1f;
+    [SerializeField] float spawnrange2 = 1f;
+    [SerializeField] float spawnrange3 = 1f;
     // Start is called before the first frame update
     void Spawn()
     {
@@ -29,7 +31,9 @@ public class ObjectCreate : MonoBehaviour
         //Debug.Log("aaaaa");
         yield return new WaitForSeconds(spawnrange);
         Spawn();
-        yield return new WaitForSeconds(spawnrange/2);
+        yield return new WaitForSeconds(spawnrange2);
+        Spawn();
+        yield return new WaitForSeconds(spawnrange3);
         Spawn();
         StartCoroutine(nameof(CoolTime));
     }
