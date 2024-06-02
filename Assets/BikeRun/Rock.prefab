@@ -184,4 +184,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rockSpeed: 30
-  _destroyTime: 30
+  _destroyTime: 5
