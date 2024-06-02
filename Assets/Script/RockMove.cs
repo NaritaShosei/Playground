@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class RockMove : MonoBehaviour
 {
+    [Header("石が向かってくるスピード")]
     [SerializeField] float _rockSpeed = 1f;
+    [Header("石が破壊される時間")]
     [SerializeField] float _destroyTime = 1f;
     // Start is called before the first frame update
     void Start()
     {
-        Rigidbody2D _rockrb = GetComponent<Rigidbody2D>();
+        Rigidbody2D _rockrb = GetComponent<Rigidbody2D>(); 
         _rockrb.velocity = new Vector2(0,-_rockSpeed);
         Invoke("Destroy",_destroyTime);
     }

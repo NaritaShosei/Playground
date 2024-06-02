@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class BackGround : MonoBehaviour
 {
+    [Header("動かしたい背景")]
     [SerializeField] GameObject _backGround1;
     //[SerializeField] GameObject _backGround2;
     //[SerializeField] GameObject _backGround3;
+    [Header("背景を動かすスピード")]
     [SerializeField] float _backGroundSpeed = 1.0f;
+    [Header("背景をループするときのスタートとエンド")]
     [SerializeField] GameObject _start;
     [SerializeField] GameObject _end;
     Vector2 _startVec;

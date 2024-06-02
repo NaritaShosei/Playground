@@ -6,9 +6,11 @@ using static UnityEditor.PlayerSettings;
 public class ObjectCreate : MonoBehaviour
 
 {
-    
+    [Header("生成したいオブジェクト")]
     [SerializeField] GameObject _prefubs;
+    [Header("指定した座標と座標の間で生成")]
     [SerializeField] List<Transform> _transforms = new List<Transform>();
+    [Header("生成のクールタイム")]
     [SerializeField] float spawnrange = 1f;
     [SerializeField] float spawnrange2 = 1f;
     [SerializeField] float spawnrange3 = 1f;
