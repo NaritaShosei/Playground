@@ -15,7 +15,14 @@ public class RockMove : MonoBehaviour
         _rockrb.velocity = new Vector2(0,-_rockSpeed);
         Invoke("Destroy",_destroyTime);
     }
-
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Player")
+    //    {
+    //        GetComponent<AudioSource>().Play();
+    //        Destroy(this.gameObject);
+    //    }
+    //}
     private void Destroy()
     {
         Destroy(gameObject);

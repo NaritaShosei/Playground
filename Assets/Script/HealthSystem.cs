@@ -29,6 +29,7 @@ public class HealthSystem : MonoBehaviour
         {
             GetHP();
             Destroy(collision.gameObject);
+            GetComponent<AudioSource>().Play();
         }
     }
     public void GetHP()
