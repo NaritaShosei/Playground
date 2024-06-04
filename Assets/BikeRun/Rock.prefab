@@ -164,6 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rockSpeed: 30
   _destroyTime: 5
+  _effectPrefub: {fileID: 1496494696399852, guid: e61802031429a4e2e8f547dbca07fe84,
+    type: 3}
 --- !u!82 &6895117265154619358
 AudioSource:
   m_ObjectHideFlags: 0
