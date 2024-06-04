@@ -27,7 +27,7 @@ public class PlayerMove : MonoBehaviour
         {
             SpeedUp = _moveSpeed;
         }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) && this.transform.position.x >= -_maxRange )
+        if (Input.GetKey(KeyCode.A) && this.transform.position.x >= -_maxRange || Input.GetKey(KeyCode.LeftArrow) && this.transform.position.x >= -_maxRange )
         {
             transform.position += transform.right * -SpeedUp * Time.deltaTime;
         }
@@ -35,7 +35,7 @@ public class PlayerMove : MonoBehaviour
         //{
         //    transform.position += transform.right * -SpeedUp * Time.deltaTime;
         //}
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) && this.transform.position.x <= _maxRange)
+        if (Input.GetKey(KeyCode.D) && this.transform.position.x <= _maxRange || Input.GetKey(KeyCode.RightArrow) && this.transform.position.x <= _maxRange)
         {
             transform.position += transform.right * SpeedUp * Time.deltaTime;
         }
