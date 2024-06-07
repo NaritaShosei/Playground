@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerMoveHY : MonoBehaviour
 {
     [Header("”½•œ‰¡’µ‚Ñ‚Ì•")]
-    [SerializeField] float _moveSize = 1f;
+    [SerializeField]  float _moveSize = 1f;
     [Header("”½•œ‰¡’µ‚Ñ‚ÌŒÀŠE’l")]
-    [SerializeField] float _moveRange = 1f;
+    [SerializeField] public float _moveRange = 1f;
     public int _moveCount = 0; 
     // Start is called before the first frame update
     void Start()
