@@ -9,17 +9,19 @@ public class PlayerMoveHY : MonoBehaviour
     [Header("”½•œ‰¡’µ‚Ñ‚ÌŒÀŠE’l")]
     [SerializeField] public float _moveRange = 1f;
     public int _moveCount = 0;
+    TimeManager _timeManager;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        _timeManager = FindAnyObjectByType<TimeManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && _timeManager.IsInGame == true)
         {
             if (this.transform.position.x > -_moveRange)
             {
@@ -35,7 +37,7 @@ public class PlayerMoveHY : MonoBehaviour
             _moveCount = 1;
         }
 
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && _timeManager.IsInGame == true)
         {
             if (this.transform.position.x < _moveRange)
             {
@@ -51,4 +53,6 @@ public class PlayerMoveHY : MonoBehaviour
             _moveCount = 0;
         }
     }
+
+
 }

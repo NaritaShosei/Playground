@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField] float _time = 0f;
+    [SerializeField] public float _time = 0f;
     Text _timeText;
+    public bool IsInGame = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class TimeManager : MonoBehaviour
         if (_time <= 0f)
         {
             _timeText.text = ("STOP");
+            IsInGame = false;
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 Invoke("GetScene", 1f);
