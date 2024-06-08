@@ -10,11 +10,13 @@ public class PlayerMoveHY : MonoBehaviour
     [SerializeField] public float _moveRange = 1f;
     public int _moveCount = 0;
     TimeManager _timeManager;
-
+    ScoreCount _scoreCount;
+    bool check = true;
     // Start is called before the first frame update
     void Start()
     {
         _timeManager = FindAnyObjectByType<TimeManager>();
+        _scoreCount = FindAnyObjectByType<ScoreCount>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,7 @@ public class PlayerMoveHY : MonoBehaviour
         if (this.transform.position.x == _moveRange)
         {
             _moveCount = 1;
+            check = true;
         }
 
         if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && _timeManager.IsInGame == true)
@@ -48,9 +51,11 @@ public class PlayerMoveHY : MonoBehaviour
                 }
             }
         }
-        if (this.transform.position.x == -_moveRange)
+        if (this.transform.position.x == -_moveRange && check)
         {
             _moveCount = 0;
+            _scoreCount.GetCount();
+            check = false;
         }
     }
 
