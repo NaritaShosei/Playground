@@ -18,6 +18,7 @@ public class PlayerMoveHY : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (this.transform.position.x > -_moveRange)

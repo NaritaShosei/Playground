@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 258521310}
   - component: {fileID: 258521309}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e4d56600c3d664c9145e9d2c9a25f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _time: 900
+  _time: 10
 --- !u!114 &258521310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 1045106402}
   - component: {fileID: 1045106401}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

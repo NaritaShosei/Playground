@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
@@ -17,10 +18,18 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         _time -= Time.deltaTime;
-        if (_time == 0f)
-        {
-
-        }
         _timeText.text = _time.ToString("F1");
+        if (_time <= 0f)
+        {
+            _timeText.text = ("STOP");
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                Invoke("GetScene", 1f);
+            }
+        }
+    }
+    public void GetScene()
+    {
+        SceneManager.LoadScene("Result");
     }
 }
