@@ -29,7 +29,7 @@ public class ScoreCount : MonoBehaviour
     }
     public void GetCount()
     {
-            count++;
+            count += 100;
 
     }
     
