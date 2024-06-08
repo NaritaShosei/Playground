@@ -19,7 +19,7 @@ public class ObjectCreate : MonoBehaviour
     {
         float distance  = Vector2.Distance(_transforms[0].position, _transforms[1].position);
         float randomDistance = Random.Range(0, distance);
-        int randumtransforms = Random.Range(0, _transforms.Count);
+        // int randumtransforms = Random.Range(0, _transforms.Count);
         Instantiate(_prefubs, _transforms[0].position + new Vector3(randomDistance,0), Quaternion.identity);
     }
 
