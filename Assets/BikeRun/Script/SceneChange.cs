@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-
+    int countMaou = 0;
     //public AudioClip AudioClip;
     //private AudioSource AudioSource;
     // Start is called before the first frame update
@@ -18,10 +18,14 @@ public class SceneChange : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            countMaou++;
+            if(countMaou == 1)
+            {
             //AudioSource.clip = AudioClip;
             //AudioSource.Play();
             GetComponent<AudioSource>().Play();
             Invoke("Call",1f);
+            }
         }
     }
      void Call()

@@ -12,19 +12,23 @@ public class PlayerMoveHY : MonoBehaviour
     TimeManager _timeManager;
     ScoreCount _scoreCount;
     bool check = true;
-    Rigidbody2D _rigidbody2D;
+     AudioSource _audioSource;
+    //Rigidbody2D _rigidbody2D;
     // Start is called before the first frame update
     void Start()
     {
         _timeManager = FindAnyObjectByType<TimeManager>();
         _scoreCount = FindAnyObjectByType<ScoreCount>();
-        _rigidbody2D = GetComponent<Rigidbody2D>();
+        // _rigidbody2D = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        {
 
+        }
         if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && _timeManager.IsInGame == true)
         {
             if (this.transform.position.x > -_moveRange)

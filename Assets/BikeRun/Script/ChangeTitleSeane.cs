@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ChangeTitleSeane : MonoBehaviour
 {
+    int countMaou = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,16 @@ public class ChangeTitleSeane : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            GetComponent<AudioSource>().Play();
-            Invoke("Title", 1f);
+            countMaou++;
+            if (countMaou == 1)
+            {
+                GetComponent<AudioSource>().Play();
+                Invoke("Title", 1f);
+            }
+           
         }
     }
     public void Title()
