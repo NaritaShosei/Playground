@@ -12,11 +12,13 @@ public class PlayerMoveHY : MonoBehaviour
     TimeManager _timeManager;
     ScoreCount _scoreCount;
     bool check = true;
+    Rigidbody2D _rigidbody2D;
     // Start is called before the first frame update
     void Start()
     {
         _timeManager = FindAnyObjectByType<TimeManager>();
         _scoreCount = FindAnyObjectByType<ScoreCount>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class PlayerMoveHY : MonoBehaviour
                 if (_moveCount == 1)
                 {
                     transform.position += transform.right * -_moveSize;
+                    //_rigidbody2D.AddForce(Vector2.left * _moveSize,ForceMode2D.Force);
                     transform.localScale = new Vector3(-0.61f, 0.61f, 0.61f);
                 }
             }
@@ -47,6 +50,7 @@ public class PlayerMoveHY : MonoBehaviour
                 if (_moveCount == 0)
                 {
                     transform.position += transform.right * _moveSize;
+                    //_rigidbody2D.AddForce(Vector2.right * _moveSize,ForceMode2D.Force);
                     transform.localScale = new Vector3(0.61f, 0.61f, 0.61f);
                 }
             }

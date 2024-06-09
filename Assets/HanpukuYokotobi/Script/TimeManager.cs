@@ -25,10 +25,10 @@ public class TimeManager : MonoBehaviour
         {
             _timeText.text = ("STOP");
             IsInGame = false;
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
+            //if (Input.GetKeyDown(KeyCode.Return))
+            //{
                 Invoke("GetScene", 1f);
-            }
+            //}
         }
     }
     public void GetScene()
