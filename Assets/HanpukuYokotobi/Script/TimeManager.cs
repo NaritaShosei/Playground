@@ -9,11 +9,12 @@ public class TimeManager : MonoBehaviour
     [SerializeField] public float _time = 0f;
     Text _timeText;
     public bool IsInGame = true;
-
+    AudioSource _audioSource;
     // Start is called before the first frame update
     void Start()
     {
         _timeText = GetComponent<Text>();
+        _audioSource = GameObject.Find("BGM").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,6 +26,8 @@ public class TimeManager : MonoBehaviour
         {
             _timeText.text = ("STOP");
             IsInGame = false;
+            _audioSource.Stop();
+
             //if (Input.GetKeyDown(KeyCode.Return))
             //{
                 Invoke("GetScene", 1f);

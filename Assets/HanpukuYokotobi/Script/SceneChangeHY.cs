@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangeHY : MonoBehaviour
 {
-     int countReturn = 0;
+    int countReturn = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
@@ -21,14 +22,14 @@ public class SceneChangeHY : MonoBehaviour
             countReturn++;
             if (countReturn == 1)
             {
-                //Invoke("GetHYScene", 2.5f);
+                Invoke("GetHYScene", 2.5f);
                 Yoidon.Play();
-                SceneManager.LoadScene("HanpukuYokotobi");
+                //SceneManager.LoadScene("HanpukuYokotobi");
             }
         }
     }
-    //public void GetHYScene()
-    //{
-    //   SceneManager.LoadScene("HanpukuYokotobi");
-    //}
+    public void GetHYScene()
+    {
+        SceneManager.LoadScene("HanpukuYokotobi");
+    }
 }
