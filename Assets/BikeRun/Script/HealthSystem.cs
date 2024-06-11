@@ -12,12 +12,13 @@ public class HealthSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (_health <= 0)
         {
             SceneManager.LoadScene("GameOver");
@@ -31,7 +32,7 @@ public class HealthSystem : MonoBehaviour
             Destroy(collision.gameObject);
             if (_health > 0)
             {
-            GetComponent<AudioSource>().Play();
+                GetComponent<AudioSource>().Play();
             }
         }
     }
