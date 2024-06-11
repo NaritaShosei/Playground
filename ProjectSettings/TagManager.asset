@@ -11,6 +11,8 @@ TagManager:
   - Pickup
   - Rock
   - wall
+  - Right
+  - Left
   layers:
   - Default
   - TransparentFX
