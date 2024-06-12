@@ -7,17 +7,17 @@ public class HYUI : MonoBehaviour
     public GameObject _count_object = null; // Textオブジェクト
     public GameObject _player = null;
     Text Count_text;
-    ScoreCount _count;
+    //ScoreCount _count;
     // Start is called before the first frame update
     void Start()
     {
         Count_text = _count_object.GetComponent<Text>();
-        _count = _player.GetComponent<ScoreCount>();
+        //_count = _player.GetComponent<ScoreCount>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Count_text.text = _count.count.ToString();
+        Count_text.text = ScoreCount.count.ToString();
     }
 }

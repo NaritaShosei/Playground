@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SetLevel : MonoBehaviour
 {
-    HealthSystem healthSystem;
+    //HealthSystem healthSystem;
     // Start is called before the first frame update
     void Start()
     {
-        healthSystem =  GetComponent<HealthSystem>();
+       //r healthSystem =  GetComponent<HealthSystem>();
     }
 
     // Update is called once per frame
@@ -17,15 +17,15 @@ public class SetLevel : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Alpha1))
         {
-            healthSystem._health = 1;
+            HealthSystem._health = 1;
         }
         if (Input.GetKeyUp(KeyCode.Alpha2))
         {
-            healthSystem._health = 2;
+            HealthSystem._health = 2;
         }
         if (Input.GetKeyUp(KeyCode.Alpha3))
         {
-            healthSystem._health = 3;
+            HealthSystem._health = 3;
         }
     }
 }

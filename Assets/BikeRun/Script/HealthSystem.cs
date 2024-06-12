@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class HealthSystem : MonoBehaviour
 {
     [Header("体力")]
-    [SerializeField] public int _health = 1;
+     public static int _health = 1;
     [Header("減る体力")]
     [SerializeField] int _stoneDamege = 1;
     // Start is called before the first frame update

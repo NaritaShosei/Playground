@@ -437,7 +437,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _time: 20
+  _pulusTime: 10
   IsInGame: 1
+  score: 500
+  mainasutime: 1
 --- !u!114 &258521310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,7 +659,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _plyerMoveRange: 3
-  count: 0
 --- !u!4 &502399701
 Transform:
   m_ObjectHideFlags: 0
@@ -754,7 +756,7 @@ GameObject:
   - component: {fileID: 772221760}
   - component: {fileID: 772221761}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -772,7 +774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c8934559210354d8ea8a609003f591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSize: 100
+  _moveSize: 250
   _moveRange: 3
   _moveCount: 0
 --- !u!212 &772221758
@@ -1460,7 +1462,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

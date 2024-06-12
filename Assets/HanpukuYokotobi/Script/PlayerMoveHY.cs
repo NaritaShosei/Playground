@@ -67,9 +67,10 @@ public class PlayerMoveHY : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Right")
+        if (collision.gameObject.tag == "Right" && _moveCount == 0)
         {
             _moveCount = 1;
+            _scoreCount.GetCount();
         }
         if (collision.gameObject.tag == "Left" && _moveCount == 1)
         {

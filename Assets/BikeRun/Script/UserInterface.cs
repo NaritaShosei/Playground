@@ -12,12 +12,12 @@ UserInterface : MonoBehaviour
     public GameObject player = null;
 
     Text HP_text;
-    HealthSystem HP;
+    //HealthSystem HP;
     // 初期化
     void Start()
     {
         HP_text = HP_object.GetComponent<Text>();
-        HP = player.GetComponent<HealthSystem>();
+        //HP = player.GetComponent<HealthSystem>();
     }
 
     // 更新
@@ -25,6 +25,6 @@ UserInterface : MonoBehaviour
     {
         // オブジェクトからTextコンポーネントを取得
         // テキストの表示を入れ替える
-        HP_text.text = HP._health.ToString();
+        HP_text.text = HealthSystem._health.ToString();
     }
 }

@@ -6,12 +6,13 @@ public class ScoreCount : MonoBehaviour
 {
     [SerializeField] public float _plyerMoveRange;
     Transform Transform;
-    public int count = -1;
+    public static int count = 0;
     //bool check = true;
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
+        count = 0;
         //Transform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
@@ -30,7 +31,7 @@ public class ScoreCount : MonoBehaviour
     }
     public void GetCount()
     {
-            count += 100;
+            count += 50;
 
     }
     
