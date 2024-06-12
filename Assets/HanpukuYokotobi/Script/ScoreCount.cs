@@ -7,6 +7,7 @@ public class ScoreCount : MonoBehaviour
     [SerializeField] public float _plyerMoveRange;
     Transform Transform;
     public static int count = 0;
+    public static bool _isCount = true;
     //bool check = true;
     // Start is called before the first frame update
     void Start()

@@ -37,6 +37,7 @@ public class TimeManager : MonoBehaviour
         {
             _timeText.text = ("STOP");
             IsInGame = false;
+            ScoreCount._isCount = false;
             _audioSource.Stop();
 
             //if (Input.GetKeyDown(KeyCode.Return))
