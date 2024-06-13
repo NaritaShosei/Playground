@@ -9,7 +9,7 @@ public class ChangeTitleSeane : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -24,11 +24,12 @@ public class ChangeTitleSeane : MonoBehaviour
                 GetComponent<AudioSource>().Play();
                 Invoke("Title", 1f);
             }
-           
+
         }
     }
     public void Title()
     {
-            SceneManager.LoadScene("Title");
+        SceneManager.LoadScene("Title");
+        HealthSystem._health = 2;
     }
 }

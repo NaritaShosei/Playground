@@ -15,15 +15,15 @@ public class SetLevel : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyUp(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1)) 
         {
             HealthSystem._health = 1;
         }
-        if (Input.GetKeyUp(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2))
         {
             HealthSystem._health = 2;
         }
-        if (Input.GetKeyUp(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3))
         {
             HealthSystem._health = 3;
         }

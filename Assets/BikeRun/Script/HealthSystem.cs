@@ -6,13 +6,13 @@ using UnityEngine.SceneManagement;
 public class HealthSystem : MonoBehaviour
 {
     [Header("体力")]
-     public static int _health = 1;
+     public static int _health = 2;
     [Header("減る体力")]
     [SerializeField] int _stoneDamege = 1;
     // Start is called before the first frame update
     void Start()
     {
-        //DontDestroyOnLoad(this.gameObject);
+        
     }
 
     // Update is called once per frame

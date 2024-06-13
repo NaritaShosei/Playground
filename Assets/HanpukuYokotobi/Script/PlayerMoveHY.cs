@@ -20,7 +20,6 @@ public class PlayerMoveHY : MonoBehaviour
         _timeManager = FindAnyObjectByType<TimeManager>();
         _scoreCount = FindAnyObjectByType<ScoreCount>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
@@ -67,12 +66,12 @@ public class PlayerMoveHY : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Right" && _moveCount == 0 && ScoreCount._isCount)
+        if (collision.gameObject.tag == "Right" && _moveCount == 0 && _timeManager._time >= 0 /*ScoreCount._isCount*/)
         {
             _moveCount = 1;
             _scoreCount.GetCount();
         }
-        if (collision.gameObject.tag == "Left" && _moveCount == 1 && ScoreCount._isCount)
+        if (collision.gameObject.tag == "Left" && _moveCount == 1 && _timeManager._time >= 0 /*ScoreCount._isCount*/)
         {
             _moveCount = 0;
             _scoreCount.GetCount();
