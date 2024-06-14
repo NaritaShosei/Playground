@@ -6,8 +6,6 @@ public class BackGround : MonoBehaviour
 {
     [Header("動かしたい背景")]
     [SerializeField] GameObject _backGround1;
-    //[SerializeField] GameObject _backGround2;
-    //[SerializeField] GameObject _backGround3;
     [Header("背景を動かすスピード")]
     [SerializeField] float _backGroundSpeed = 1.0f;
     [Header("背景をループするときのスタートとエンド")]
@@ -27,22 +25,15 @@ public class BackGround : MonoBehaviour
         {
             _backGround1.transform.position = _startVec;
         }
-        //if (_backGround2.transform.position.y < _endVec.y)
-        //{
-        //    _backGround2.transform.position = _startVec;
-        //}
-        //if (_backGround3.transform.position.y < _endVec.y)
-        //{
-        //    _backGround3.transform.position = _startVec;
-        //}
-
-
     }
+    
     private void FixedUpdate()
     {
         _backGround1.transform.position += Vector3.down * _backGroundSpeed;
-        //_backGround2.transform.position += Vector3.down * _backGroundSpeed;
-        //_backGround3.transform.position += Vector3.down * _backGroundSpeed;
+        if (Input.GetKey(KeyCode.Space))
+        {
+            _backGround1.transform.position += Vector3.down * _backGroundSpeed * 1.5f;
+        }
     }
 
 }

@@ -16,6 +16,14 @@ public class Goal : MonoBehaviour
     {
         Rigidbody2D goalrb = GetComponent<Rigidbody2D>();
         goalrb.velocity = new Vector2(0,-30);
+        if (Input.GetKey(KeyCode.Space))
+        {
+            goalrb.velocity = new Vector2(0, -30 * 1.5f);
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            goalrb.velocity = new Vector2(0, -30 );
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
