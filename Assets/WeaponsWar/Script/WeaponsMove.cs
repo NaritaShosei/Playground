@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class WeaponsMove : MonoBehaviour
 {
-    public bool IsInvincible;
+    
     [SerializeField] float _move = 1f;
     [SerializeField] Animator swordAnim;
-    [SerializeField] float _hp = 5f;
+    
     void Start()
     {
     }
@@ -30,13 +30,7 @@ public class WeaponsMove : MonoBehaviour
 
     }
 
-    public void Damage(float damage)
-    {
-        if (!IsInvincible)
-        {
-            _hp -= damage;
-        }
-    }
+    
 
 
     //public void D(int d) => _hp = IsInvincible ? _hp : _hp - d;
