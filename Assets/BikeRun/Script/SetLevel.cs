@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class SetLevel : MonoBehaviour
 {
-    //HealthSystem healthSystem;
     // Start is called before the first frame update
     void Start()
     {
-       //r healthSystem =  GetComponent<HealthSystem>();
     }
 
     // Update is called once per frame

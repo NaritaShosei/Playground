@@ -11,7 +11,6 @@ public class TimeManager : MonoBehaviour
     Text _timeText;
     public bool IsInGame = true;
     AudioSource _audioSource;
-    //ScoreCount _scoreCount;
     public int score = 500;
     public float mainasutime = 0.5f;
     // Start is called before the first frame update
@@ -19,7 +18,6 @@ public class TimeManager : MonoBehaviour
     {
         _timeText = GetComponent<Text>();
         _audioSource = GameObject.Find("BGM").GetComponent<AudioSource>();
-       //_scoreCount = GameObject.Find("Score").GetComponent<ScoreCount>();
     }
 
     // Update is called once per frame
@@ -37,13 +35,8 @@ public class TimeManager : MonoBehaviour
         {
             _timeText.text = ("STOP");
             IsInGame = false;
-            //ScoreCount._isCount = false;
             _audioSource.Stop();
-
-            //if (Input.GetKeyDown(KeyCode.Return))
-            //{
             Invoke("GetScene", 1f);
-            //}
         }
     }
     public void GetScene()

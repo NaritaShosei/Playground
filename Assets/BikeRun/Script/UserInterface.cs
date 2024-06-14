@@ -12,12 +12,10 @@ UserInterface : MonoBehaviour
     public GameObject player = null;
 
     Text HP_text;
-    //HealthSystem HP;
     // 初期化
     void Start()
     {
         HP_text = HP_object.GetComponent<Text>();
-        //HP = player.GetComponent<HealthSystem>();
     }
 
     // 更新

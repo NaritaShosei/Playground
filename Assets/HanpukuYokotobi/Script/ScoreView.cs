@@ -6,10 +6,8 @@ using UnityEngine.UI;
 public class ScoreView : MonoBehaviour
 {
     [SerializeField] Text scoreText;
-    //ScoreCount _scoreCount2;
     private void Start()
     {
-        //_scoreCount2 = FindAnyObjectByType<ScoreCount>();
         scoreText.text = ScoreCount.count.ToString();
     }
 
