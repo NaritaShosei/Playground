@@ -16,7 +16,12 @@ public class WeaponsHP : MonoBehaviour
         if (!IsInvincible)
         {
             _hp -= damage;
+            if (_hp <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
+
     }
 
     // Update is called once per frame

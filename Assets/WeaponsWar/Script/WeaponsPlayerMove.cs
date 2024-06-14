@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponsMove : MonoBehaviour
+public class WeaponsPlayerMove : MonoBehaviour
 {
     
     [SerializeField] float _move = 1f;
@@ -22,6 +22,7 @@ public class WeaponsMove : MonoBehaviour
         var pos = Camera.main.WorldToScreenPoint(transform.localPosition);
         var rotation = Quaternion.LookRotation(Vector3.forward, Input.mousePosition - pos);
         transform.rotation = rotation;
+
     }
 
     // Update is called once per frame
