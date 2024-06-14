@@ -11,7 +11,7 @@ public class TimeManager : MonoBehaviour
     Text _timeText;
     public bool IsInGame = true;
     AudioSource _audioSource;
-    public int score = 500;
+    public int scoreLine = 500;
     public float mainasutime = 0.5f;
     // Start is called before the first frame update
     void Start()
@@ -25,11 +25,11 @@ public class TimeManager : MonoBehaviour
     {
         _time -= Time.deltaTime;
         _timeText.text = _time.ToString("F1");
-        if (ScoreCount.count == score)
+        if (ScoreCount.score == scoreLine)
         {
             _time += _pulusTime;
             _pulusTime = _pulusTime - mainasutime;
-            score += 500;
+            scoreLine += 500;
         }
         if (_time <= 0f)
         {

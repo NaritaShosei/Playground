@@ -15,6 +15,6 @@ public class HYUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Count_text.text = ScoreCount.count.ToString();
+        Count_text.text = ScoreCount.score.ToString();
     }
 }

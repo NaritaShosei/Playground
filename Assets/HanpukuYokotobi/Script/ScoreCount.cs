@@ -6,11 +6,11 @@ public class ScoreCount : MonoBehaviour
 {
     [SerializeField] public float _plyerMoveRange;
     Transform Transform;
-    public static int count = 0;
+    public static int score = 0;
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
-        count = 0;
+        score = 0;
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class ScoreCount : MonoBehaviour
     }
     public void GetCount()
     {
-            count += 50;
+            score += 50;
 
     }
     
