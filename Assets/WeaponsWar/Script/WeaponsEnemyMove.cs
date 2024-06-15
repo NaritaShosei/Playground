@@ -29,7 +29,7 @@ public class WeaponsEnemyMove : MonoBehaviour
         else
         {
             transform.position = new Vector2(transform.position.x + Axis.x * _enemyMoveSpeed * Time.deltaTime, transform.position.y + Axis.y * _enemyMoveSpeed * Time.deltaTime);
-
+            _rigidbody.velocity = new Vector2(Axis.x * 0, Axis.y * 0);
         }
     }
 }
