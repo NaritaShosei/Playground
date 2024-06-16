@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponsPlayerMove : MonoBehaviour
+public class WeaponsPlayerMoveSword : MonoBehaviour
 {
     
     [SerializeField] float _move = 1f;
