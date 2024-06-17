@@ -6,18 +6,21 @@ using static UnityEditor.PlayerSettings;
 public class WeaponsEnemyMoveSpear : MonoBehaviour
 {
     [SerializeField] float _enemyMoveSpeed = 1f;
-    [SerializeField] Transform _playerTransform;
+    Transform _playerTransform;
     [SerializeField] float _attackRange;
     [SerializeField] Animator swordAnim;
     Rigidbody2D _rigidbody;
     bool _isEnemyMove;
     [SerializeField] float _interval = 2f;
     float _timer = 0f;
+    WeaponsHP damage;
     // Start is called before the first frame update
     void Start()
     {
+        damage = GetComponentInChildren<WeaponsHP>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _timer = _interval;
+        _playerTransform = GameObject.Find("PlayerSword").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -56,6 +59,10 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
             transform.rotation = roa;
            
         }
+        if (damage._hp <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void PlayAnim()
@@ -63,5 +70,13 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
         swordAnim.Play("SpearAttackAnim");
         _timer = 0f;
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        WeaponsHP HP = _playerTransform.GetComponentInChildren<WeaponsHP>();
+        if (HP.IsInvincible)
+        {
+            damage.Damage(1);
+        }
     }
 }
