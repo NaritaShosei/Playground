@@ -20,7 +20,7 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
     private void Update()
     {
         _timer += Time.deltaTime;
-        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && _timer > _intrval)
+        if ((Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space)) && _timer > _intrval)
         {
             _timer = 0;
             swordAnim.Play("SwordAtackAnim");
@@ -32,15 +32,6 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
         transform.rotation = rotation;
 
     }
-
-    // Update is called once per frame
-    private void FixedUpdate()
-    {
-
-    }
-
-    
-
 
     //public void D(int d) => _hp = IsInvincible ? _hp : _hp - d;
 }
