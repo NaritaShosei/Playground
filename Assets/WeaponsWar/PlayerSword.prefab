@@ -356,10 +356,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3629699290739749944}
+  - component: {fileID: 2649019227376723204}
   - component: {fileID: 76688768084657136}
   - component: {fileID: 8297778619709549976}
   - component: {fileID: 7974903249959137062}
-  - component: {fileID: 2649019227376723204}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -383,6 +383,20 @@ Transform:
   - {fileID: 8553529864269481229}
   m_Father: {fileID: 4621365741270412829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -360}
+--- !u!114 &2649019227376723204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2841921513020833722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84426bf9d23b79d43bb39e6c239413a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hp: 5
+  IsInvincible: 0
 --- !u!212 &76688768084657136
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -492,20 +506,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.67}
   serializedVersion: 2
   m_Radius: 2.66
---- !u!114 &2649019227376723204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2841921513020833722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84426bf9d23b79d43bb39e6c239413a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hp: 5
-  IsInvincible: 0
 --- !u!1 &3555075050800966809
 GameObject:
   m_ObjectHideFlags: 0

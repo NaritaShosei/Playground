@@ -22,31 +22,43 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var roatation = Quaternion.LookRotation( Vector3.forward,_playerTransform.position - transform.position);
-        transform.rotation = roatation;
-        // Debug.Log($"time{_timer}");
-        _timer += Time.deltaTime;
-        // é©êgÇ∆ëäéËÇÃäpìxÇÇ∆ÇÈ
-        float angle = Mathf.Atan2(_playerTransform.position.y - transform.position.y, _playerTransform.position.x - transform.position.x);
-
-        Vector2 Axis = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
-
-        // éwíËÇµÇΩãóó£ÇÊÇËíZÇ≠Ç»Ç¡ÇΩÇÁçUåÇÇ∑ÇÈ
-        if (Vector2.Distance(_playerTransform.position, transform.position) <= _attackRange)
+        if (_playerTransform != null)
         {
-            if (Vector2.Distance(_playerTransform.position, transform.position) <= 0.2f)
-            {
-                _rigidbody.velocity = new Vector2(0, 0);
-            }
-            if (_timer > _interval)
-            {
+            var roatation = Quaternion.LookRotation(Vector3.forward, _playerTransform.position - transform.position);
+            transform.rotation = roatation;
+            float angle = Mathf.Atan2(_playerTransform.position.y - transform.position.y, _playerTransform.position.x - transform.position.x);
 
-                PlayAnim();
+            Vector2 Axis = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+
+
+            // Debug.Log($"time{_timer}");
+            _timer += Time.deltaTime;
+            // é©êgÇ∆ëäéËÇÃäpìxÇÇ∆ÇÈ
+
+
+            // éwíËÇµÇΩãóó£ÇÊÇËíZÇ≠Ç»Ç¡ÇΩÇÁçUåÇÇ∑ÇÈ
+            if (Vector2.Distance(_playerTransform.position, transform.position) <= _attackRange)
+            {
+                if (Vector2.Distance(_playerTransform.position, transform.position) <= 0.2f)
+                {
+                    _rigidbody.velocity = new Vector2(0, 0);
+                }
+                if (_timer > _interval)
+                {
+
+                    PlayAnim();
+                }
+            }
+            else
+            {
+                _rigidbody.velocity = new Vector2(Axis.x * _enemyMoveSpeed, Axis.y * _enemyMoveSpeed);
             }
         }
-        else
+        if (_playerTransform == null)
         {
-            _rigidbody.velocity = new Vector2(Axis.x * _enemyMoveSpeed, Axis.y * _enemyMoveSpeed);
+            var roa = Quaternion.identity;
+            transform.rotation = roa;
+            _rigidbody.velocity = new Vector2(0, 0);
         }
     }
 

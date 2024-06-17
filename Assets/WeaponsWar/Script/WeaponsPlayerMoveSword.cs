@@ -43,10 +43,10 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        WeaponsHP hP = _enemySword.GetComponentInChildren<WeaponsHP>();
+        WeaponsHP HP = _enemySword.GetComponentInChildren<WeaponsHP>();
         WeaponsHP HP2 = _enemySpear.GetComponentInChildren<WeaponsHP>();
 
-        if (hP.IsInvincible)
+        if (HP.IsInvincible || HP2.IsInvincible)
         {
             damage.Damage(1);
         }

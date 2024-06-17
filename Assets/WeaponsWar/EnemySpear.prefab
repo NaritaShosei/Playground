@@ -219,8 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyMoveSpeed: 6
-  _playerTransform: {fileID: 4621365741270412829, guid: 9b31ff1794922c4418533621e6edec93,
-    type: 3}
+  _playerTransform: {fileID: 0}
   _attackRange: 3
   swordAnim: {fileID: 2040524209645656820}
   _interval: 2
