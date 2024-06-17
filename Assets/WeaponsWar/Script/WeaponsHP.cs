@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class WeaponsHP : MonoBehaviour
 {
-    [SerializeField] float _hp = 5f;
+    [SerializeField] public float _hp = 5f;
     public bool IsInvincible;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     public void Damage(float damage)
     {
         if (!IsInvincible)
         {
             _hp -= damage;
-            if (_hp <= 0)
-            {
-                Destroy(gameObject);
-            }
+            
         }
 
     }
@@ -27,6 +24,6 @@ public class WeaponsHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

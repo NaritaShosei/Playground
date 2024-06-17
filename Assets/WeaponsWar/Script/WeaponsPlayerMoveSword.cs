@@ -9,9 +9,14 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
     [SerializeField] Animator swordAnim;
     [SerializeField] float _timer =0;
     [SerializeField] float _intrval = 1f;
+    [SerializeField] GameObject _enemySword;
+    [SerializeField] GameObject _enemySpear;
+    WeaponsHP damage;
     bool _isAttackOnStart = true;
     void Start()
     {
+        damage = GetComponentInChildren<WeaponsHP>();
+
         if (_isAttackOnStart)
         {
             _timer = _intrval;
@@ -30,8 +35,22 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
         var pos = Camera.main.WorldToScreenPoint(transform.localPosition);
         var rotation = Quaternion.LookRotation(Vector3.forward, Input.mousePosition - pos);
         transform.rotation = rotation;
+        if (damage._hp <= 0)
+        {
+            Destroy(gameObject);
+        }
 
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        WeaponsHP hP = _enemySword.GetComponentInChildren<WeaponsHP>();
+        WeaponsHP HP2 = _enemySpear.GetComponentInChildren<WeaponsHP>();
 
+        if (hP.IsInvincible)
+        {
+            damage.Damage(1);
+        }
+        
+    }
     //public void D(int d) => _hp = IsInvincible ? _hp : _hp - d;
 }

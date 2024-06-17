@@ -13,6 +13,7 @@ TagManager:
   - wall
   - Right
   - Left
+  - EnemySword
   layers:
   - Default
   - TransparentFX
