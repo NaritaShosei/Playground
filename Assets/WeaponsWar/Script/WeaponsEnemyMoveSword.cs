@@ -59,8 +59,8 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
         }
         if (_playerTransform == null)
         {
-            var roa = Quaternion.identity;
-            transform.rotation = roa;
+            Quaternion myroa = transform.rotation;
+            transform.rotation = myroa;
             _rigidbody.velocity = new Vector2(0, 0);
         }
         if (damage._hp <= 0)

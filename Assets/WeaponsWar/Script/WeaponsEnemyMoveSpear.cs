@@ -55,8 +55,8 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
         }
         if (_playerTransform == null)
         {
-            var roa = Quaternion.identity;
-            transform.rotation = roa;
+            Quaternion myroa = transform.rotation;
+            transform.rotation = myroa;
            
         }
         if (damage._hp <= 0)

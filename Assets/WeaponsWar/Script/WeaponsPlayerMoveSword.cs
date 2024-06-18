@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class WeaponsPlayerMoveSword : MonoBehaviour
 {
-    
+
     [SerializeField] float _move = 1f;
     [SerializeField] Animator swordAnim;
-    [SerializeField] float _timer =0;
+    [SerializeField] float _timer = 0;
     [SerializeField] float _intrval = 1f;
     [SerializeField] GameObject _enemySword;
     [SerializeField] GameObject _enemySpear;
@@ -43,14 +43,19 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        WeaponsHP HP = _enemySword.GetComponentInChildren<WeaponsHP>();
-        WeaponsHP HP2 = _enemySpear.GetComponentInChildren<WeaponsHP>();
-
-        if (HP.IsInvincible || HP2.IsInvincible)
+        //WeaponsHP HP = _enemySword.GetComponentInChildren<WeaponsHP>();
+        //WeaponsHP HP2 = _enemySpear.GetComponentInChildren<WeaponsHP>();
+        WeaponsHP HP3 = collision.gameObject.GetComponent<WeaponsHP>();
+        if (HP3 != null)
         {
-            damage.Damage(1);
+            if (HP3.IsInvincible || HP3.IsInvincible)
+            {
+                damage.Damage(1);
+            }
         }
-        
+
+
+
     }
     //public void D(int d) => _hp = IsInvincible ? _hp : _hp - d;
 }

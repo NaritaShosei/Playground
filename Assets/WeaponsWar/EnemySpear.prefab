@@ -219,10 +219,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyMoveSpeed: 6
-  _playerTransform: {fileID: 0}
   _attackRange: 3
   swordAnim: {fileID: 2040524209645656820}
-  _interval: 2
+  _interval: 5
 --- !u!50 &2688326946110155641
 Rigidbody2D:
   serializedVersion: 4

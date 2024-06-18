@@ -17,10 +17,10 @@ public class ObjectCreate : MonoBehaviour
     // Start is called before the first frame update
     void Spawn()
     {
-        float distance  = Vector2.Distance(_transforms[0].position, _transforms[1].position);
+        float distance = Vector2.Distance(_transforms[0].position, _transforms[1].position);
         float randomDistance = Random.Range(0, distance);
         // int randumtransforms = Random.Range(0, _transforms.Count);
-        Instantiate(_prefubs, _transforms[0].position + new Vector3(randomDistance,0), Quaternion.identity);
+        Instantiate(_prefubs, _transforms[0].position + new Vector3(randomDistance, 0), Quaternion.identity);
     }
 
     // Update is called once per frame
