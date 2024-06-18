@@ -15,7 +15,7 @@ UserInterface : MonoBehaviour
     // 初期化
     void Start()
     {
-        HP_text = HP_object.GetComponent<Text>();
+        HP_text =  HP_object.GetComponent<Text>();
     }
 
     // 更新
@@ -23,6 +23,6 @@ UserInterface : MonoBehaviour
     {
         // オブジェクトからTextコンポーネントを取得
         // テキストの表示を入れ替える
-        HP_text.text = HealthSystem._health.ToString();
+        HP_text.text = "HP: " + HealthSystem._health.ToString();
     }
 }

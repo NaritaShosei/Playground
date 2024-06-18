@@ -18,7 +18,7 @@ public class Goal : MonoBehaviour
         goalrb.velocity = new Vector2(0,-30);
         if (Input.GetKey(KeyCode.Space))
         {
-            goalrb.velocity = new Vector2(0, -30 * 1.5f);
+            goalrb.velocity = new Vector2(0, -30 * 2f);
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {

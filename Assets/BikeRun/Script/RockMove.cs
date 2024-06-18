@@ -26,7 +26,7 @@ public class RockMove : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            _rockrb.velocity = new Vector2(0,-_rockSpeed * 1.5f);
+            _rockrb.velocity = new Vector2(0,-_rockSpeed * 2f);
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
