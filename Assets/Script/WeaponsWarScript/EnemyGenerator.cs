@@ -4,53 +4,68 @@ using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject[] _enemys;
-    [SerializeField] Transform[] _spawnPrefab1;
-    [SerializeField] Transform[] _spawnPrefab2;
-    [SerializeField] Transform[] _spawnPrefab3;
-    [SerializeField] Transform[] _spawnPrefab4;
-    int _enemyCount = 0;
-    [SerializeField] float _spawnInterval1;
-    [SerializeField] float _spawnInterval2;
-    [SerializeField] float _spawnInterval3;
-    // Start is called before the first frame update
-    void Start()
+    [Header("敵のPrefab")]
+    [SerializeField] private GameObject[] _enemyObjects;
+    [Header("スポーンのインターバル")]
+    [SerializeField] private float _interval = 1;
+    private float _timer = 0;
+    [Header("スポーンの中心点")]
+    [SerializeField] private Vector2 _spawnFieldCentorPoint;
+    [Header("スポーンの幅")]
+    [SerializeField] private Vector2 _spawnField;
+    [SerializeField] Transform _playerTransform;
+    public SpawnArea spawnArea;
+    public enum SpawnArea
     {
-        StartCoroutine("CoolTime");
+        up, down, left, right
     }
-    void Spawn()
+    Vector2 spawnPoint;
+    private void EnemySpawn()
     {
-        float dis = Vector2.Distance(_spawnPrefab1[0].position, _spawnPrefab1[1].position);
-        float randomdis = Random.Range(0, dis);
-        Instantiate(_enemys[_enemyCount], _spawnPrefab1[0].position + new Vector3(randomdis, 0), Quaternion.identity);
-        _enemyCount++;
-        if (_enemyCount >= _enemys.Length)
+        System.Array values = System.Enum.GetValues(typeof(SpawnArea));
+        int randomIndex = Random.Range(0, values.Length);
+        spawnArea = (SpawnArea)values.GetValue(randomIndex);
+
+        if (spawnArea == SpawnArea.up || spawnArea == SpawnArea.down)
         {
-            _enemyCount = 0;
+            spawnPoint.x = Random.Range(_playerTransform.position.x - _spawnField.x / 2, _playerTransform.position.x + _spawnField.x / 2);
+            spawnPoint.y = Random.Range(_playerTransform.position.y - _spawnField.y /2 , _playerTransform.position.y + _spawnField.y / 2);
         }
-    }
-    void Spawn2()
-    {
-        float dis2 = Vector2.Distance(_spawnPrefab2[0].position, _spawnPrefab2[1].position);
-        float randomdis2 = Random.Range(0, dis2);
-        Instantiate(_enemys[_enemyCount], _spawnPrefab1[0].position + new Vector3(0,randomdis2), Quaternion.identity);
-        _enemyCount++;
-        if (_enemyCount >= _enemys.Length)
+        else if (spawnArea == SpawnArea.right || spawnArea == SpawnArea.left)
         {
-            _enemyCount = 0;
+            spawnPoint.y = Random.Range(_playerTransform.position.y - _spawnField.y / 2, _playerTransform.position.y + _spawnField.y / 2);
+            spawnPoint.x = Random.Range(_playerTransform.position.x - _spawnField.x / 2, _playerTransform.position.x + _spawnField.x / 2);
         }
+        //switch (spawnArea)
+        //{
+        //    case SpawnArea.up:
+        //        spawnPoint.y = _spawnField.y / 2;
+        //        break;
+        //    case SpawnArea.down:
+        //        spawnPoint.y = _spawnField.y / 2;
+        //        break;
+        //    case SpawnArea.right:
+        //        spawnPoint.x = _spawnField.x / 2;
+        //        break;
+        //    case SpawnArea.left:
+        //        spawnPoint.x = _spawnField.x / 2;
+        //        break;
+
+        //}
+       
+        int randomEnemyIndex = Random.Range(0, _enemyObjects.Length);
+        Instantiate(_enemyObjects[randomEnemyIndex], spawnPoint, Quaternion.identity);
     }
-    // Update is called once per frame
-    IEnumerator CoolTime()
-    {
-        yield return new WaitForSeconds(_spawnInterval1);
-        Spawn();
-        yield return new WaitForSeconds(_spawnInterval2);
-        Spawn2();
-        StartCoroutine("CoolTime");
-    }
-    void Update()
+    private void Update()
     {
         
+
+        _timer += Time.deltaTime;
+        if (_timer > _interval)
+        {
+            EnemySpawn();
+            _timer = 0;
+        }
+
     }
 }

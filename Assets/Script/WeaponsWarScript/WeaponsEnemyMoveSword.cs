@@ -18,7 +18,16 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
         damage = GetComponentInChildren<WeaponsHP>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _timer = _interval;
-        _playerTransform = GameObject.Find("PlayerSword").GetComponent<Transform>();
+        GameObject player = GameObject.Find("PlayerSword");
+
+        if (player.TryGetComponent<Transform>(out var transform))
+        {
+            _playerTransform = transform;
+        }
+        if (Vector2.Distance(_playerTransform.position, this.transform.position) < 5)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -76,6 +85,7 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (_playerTransform == null) { return; }
         WeaponsHP HP = _playerTransform.GetComponentInChildren<WeaponsHP>();
         if (HP.IsInvincible)
         {
