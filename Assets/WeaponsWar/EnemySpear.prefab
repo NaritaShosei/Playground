@@ -917,5 +917,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84426bf9d23b79d43bb39e6c239413a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 5
+  _hp: 1
   IsInvincible: 0

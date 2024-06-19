@@ -26,7 +26,7 @@ public class ObjectCreate : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        StartCoroutine(nameof(CoolTime));
+        StartCoroutine("CoolTime");
     }
     IEnumerator CoolTime()
     {
