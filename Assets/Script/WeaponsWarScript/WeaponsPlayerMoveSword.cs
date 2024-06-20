@@ -41,6 +41,7 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
         {
             Destroy(gameObject);
             weaponsWarTimeManager.IsSurvive = false;
+            SceneChangeManager.Result();
         }
 
     }
