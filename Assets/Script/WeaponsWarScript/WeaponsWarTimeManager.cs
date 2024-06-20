@@ -7,16 +7,20 @@ public class WeaponsWarTimeManager : MonoBehaviour
 {
     public float _timer = 0;
     [SerializeField] Text _text;
+    public bool IsSurvive = true;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        _timer += Time.deltaTime;
-        _text.text ="êßå¿éûä‘ : " + _timer.ToString("F2");
+        if (IsSurvive)
+        {
+            _timer += Time.deltaTime;
+        }
+        _text.text = "ê∂ë∂éûä‘ : " + _timer.ToString("F2");
     }
 }

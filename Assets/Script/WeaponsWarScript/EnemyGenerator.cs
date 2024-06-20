@@ -25,17 +25,20 @@ public class EnemyGenerator : MonoBehaviour
         System.Array values = System.Enum.GetValues(typeof(SpawnArea));
         int randomIndex = Random.Range(0, values.Length);
         spawnArea = (SpawnArea)values.GetValue(randomIndex);
+        if (_playerTransform != null)
+        {
+            if (spawnArea == SpawnArea.up || spawnArea == SpawnArea.down)
+            {
+                spawnPoint.x = Random.Range(_playerTransform.position.x - _spawnField.x / 2, _playerTransform.position.x + _spawnField.x / 2);
+                spawnPoint.y = Random.Range(_playerTransform.position.y - _spawnField.y / 2, _playerTransform.position.y + _spawnField.y / 2);
+            }
+            else if (spawnArea == SpawnArea.right || spawnArea == SpawnArea.left)
+            {
+                spawnPoint.y = Random.Range(_playerTransform.position.y - _spawnField.y / 2, _playerTransform.position.y + _spawnField.y / 2);
+                spawnPoint.x = Random.Range(_playerTransform.position.x - _spawnField.x / 2, _playerTransform.position.x + _spawnField.x / 2);
+            }
+        }
 
-        if (spawnArea == SpawnArea.up || spawnArea == SpawnArea.down)
-        {
-            spawnPoint.x = Random.Range(_playerTransform.position.x - _spawnField.x / 2, _playerTransform.position.x + _spawnField.x / 2);
-            spawnPoint.y = Random.Range(_playerTransform.position.y - _spawnField.y /2 , _playerTransform.position.y + _spawnField.y / 2);
-        }
-        else if (spawnArea == SpawnArea.right || spawnArea == SpawnArea.left)
-        {
-            spawnPoint.y = Random.Range(_playerTransform.position.y - _spawnField.y / 2, _playerTransform.position.y + _spawnField.y / 2);
-            spawnPoint.x = Random.Range(_playerTransform.position.x - _spawnField.x / 2, _playerTransform.position.x + _spawnField.x / 2);
-        }
         //switch (spawnArea)
         //{
         //    case SpawnArea.up:
@@ -52,13 +55,13 @@ public class EnemyGenerator : MonoBehaviour
         //        break;
 
         //}
-       
+
         int randomEnemyIndex = Random.Range(0, _enemyObjects.Length);
         Instantiate(_enemyObjects[randomEnemyIndex], spawnPoint, Quaternion.identity);
     }
     private void Update()
     {
-        
+
 
         _timer += Time.deltaTime;
         if (_timer > _interval)

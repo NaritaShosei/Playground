@@ -13,8 +13,10 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
     [SerializeField] GameObject _enemySpear;
     WeaponsHP damage;
     bool _isAttackOnStart = true;
+    WeaponsWarTimeManager weaponsWarTimeManager;
     void Start()
     {
+        weaponsWarTimeManager = GameObject.Find("Time").GetComponent<WeaponsWarTimeManager>();
         damage = GetComponentInChildren<WeaponsHP>();
 
         if (_isAttackOnStart)
@@ -38,6 +40,7 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
         if (damage._hp <= 0)
         {
             Destroy(gameObject);
+            weaponsWarTimeManager.IsSurvive = false;
         }
 
     }
