@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Select : MonoBehaviour
 {
-    public static int _selectedWeapon;    
+    public static int _selectedWeapon = 0;    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +16,11 @@ public class Select : MonoBehaviour
     {
         
     }
-    void SelectedSword()
+    public void SelectedSword()
     {
         _selectedWeapon = 0;
     }
-    void SelectedSpear()
+    public void SelectedSpear()
     {
         _selectedWeapon = 1;
     }

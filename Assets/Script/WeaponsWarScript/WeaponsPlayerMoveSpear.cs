@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponsPlayerMoveSword : MonoBehaviour
+public class WeaponsPlayerMoveSpear : MonoBehaviour
 {
 
     [SerializeField] float _move = 1f;
-    [SerializeField] Animator swordAnim;
+    [SerializeField] Animator spearAnim;
     [SerializeField] float _timer = 0;
     [SerializeField] float _intrval = 1f;
     WeaponsHP _damage;
     bool _isAttackOnStart = true;
     WeaponsWarTimeManager _weaponsWarTimeManager;
     SceneChangeManager _sceneChangeManager;
-    public bool IsSwordAlive = true;
+    public bool IsSpearAlive = true;
     void Start()
     {
         _weaponsWarTimeManager = GameObject.Find("Time").GetComponent<WeaponsWarTimeManager>();
@@ -28,10 +28,10 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
     private void Update()
     {
         _timer += Time.deltaTime;
-        if ((Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space)) && _timer > _intrval && IsSwordAlive)
+        if ((Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space)) && _timer > _intrval && IsSpearAlive)
         {
             _timer = 0;
-            swordAnim.Play("SwordAtackAnim");
+            spearAnim.Play("SpearAttackAnim");
         }
         transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * Time.deltaTime * _move, 0f, 0f);
         transform.position += new Vector3(0, Input.GetAxisRaw("Vertical") * Time.deltaTime * _move, 0f);
@@ -43,8 +43,7 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
             _damage.IsAlive = false;
             Destroy(gameObject, 1);
             _weaponsWarTimeManager.IsSurvive = false;
-            IsSwordAlive = false;
-            //Invoke("SceneChange", 1.2f);
+            IsSpearAlive = false;
         }
 
     }

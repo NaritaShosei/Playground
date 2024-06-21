@@ -42,14 +42,7 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
             var roatation = Quaternion.LookRotation(Vector3.forward, _playerTransform.position - transform.position);
             transform.rotation = roatation;
             float angle = Mathf.Atan2(_playerTransform.position.y - transform.position.y, _playerTransform.position.x - transform.position.x);
-
             Vector2 direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
-
-
-            // Debug.Log($"time{_timer}");
-            // é©êgÇ∆ëäéËÇÃäpìxÇÇ∆ÇÈ
-
-
             // éwíËÇµÇΩãóó£ÇÊÇËíZÇ≠Ç»Ç¡ÇΩÇÁçUåÇÇ∑ÇÈ
             if (Vector2.Distance(_playerTransform.position, transform.position) <= _attackRange)
             {
@@ -84,7 +77,6 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
     {
         swordAnim.Play("SwordAtackAnim");
         _timer = 0f;
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -95,30 +87,4 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
             damage.Damage(1);
         }
     }
-    //    if (Vector2.Distance(_playerTransform.position, transform.position) <= _attackRange && _isEnemyMove)
-    //    {
-    //        
-    //        //ëäéËÇÃï˚å¸Ç…å¸Ç©Ç§
-    //        
-    //        if (Vector2.Distance(_playerTransform.position, transform.position) >= 2)
-    //        {
-    //            _isEnemyMove = false;
-    //        }
-    //    }
-    //    //ó£ÇÍÇΩÇÁà⁄ìÆÇêÿÇËë÷Ç¶ÇÈ
-    //    else if (Vector2.Distance(_playerTransform.position, transform.position) >= _attackRange)
-    //    {
-    //        if (!_isEnemyMove)
-    //        {
-    //            transform.position = new Vector2(transform.position.x + Axis.x * _enemyMoveSpeed * Time.deltaTime, transform.position.y + Axis.y * _enemyMoveSpeed * Time.deltaTime);
-    //            _rigidbody.velocity = new Vector2(Axis.x * 0, Axis.y * 0);
-    //            _isEnemyMove = true;
-    //            Debug.Log($"ó£ÇÍÇΩ{_rigidbody.velocity}");
-    //        }
-    //        else
-    //        {
-    //            _rigidbody.velocity = new Vector2(Axis.x * _enemyMoveSpeed, Axis.y * _enemyMoveSpeed);
-    //        }
-    //    }
-
 }
