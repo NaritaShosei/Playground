@@ -217,6 +217,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8623060}
   m_CullTransparentMesh: 1
+--- !u!114 &157600923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2954388615232297510, guid: 66a6980a2c289f544aebd3413cf591a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 859482923}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84426bf9d23b79d43bb39e6c239413a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &240788844
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,8 +771,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6174521d54f4494aa6571453bd3da0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponsHP: {fileID: 1448757165}
   _textHp: {fileID: 1362085602}
+  _playerSwordHP: {fileID: 1448757170}
+  _playerSpearHP: {fileID: 157600923}
 --- !u!114 &1362085602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -875,12 +888,18 @@ Transform:
   - {fileID: 691761855}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1448757165 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2841921513020833722, guid: 9b31ff1794922c4418533621e6edec93,
+--- !u!114 &1448757170 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2649019227376723204, guid: 9b31ff1794922c4418533621e6edec93,
     type: 3}
   m_PrefabInstance: {fileID: 1786543629}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84426bf9d23b79d43bb39e6c239413a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1663658281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1106,6 +1125,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2130112201049702537, guid: 608c056b7cda6eb46bc4f43daabb6cde,
         type: 3}
+    - target: {fileID: 2649019227376723204, guid: 9b31ff1794922c4418533621e6edec93,
+        type: 3}
+      propertyPath: IsInvincible
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4621365741270412829, guid: 9b31ff1794922c4418533621e6edec93,
         type: 3}
       propertyPath: m_LocalPosition.x

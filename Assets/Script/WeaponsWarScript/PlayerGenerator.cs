@@ -17,7 +17,6 @@ public class PlayerGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerGenerator.playerAlive = PlayerGenerator.PlayerAlive.sword;
         WeaponsPlayerMoveSpear.IsSpearAlive = true;
         WeaponsPlayerMoveSword.IsSwordAlive = true;
         _cinemachine = GameObject.Find("Virtual Camera").GetComponent<CinemachineVirtualCamera>();

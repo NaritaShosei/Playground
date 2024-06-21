@@ -76,13 +76,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1563905169154104396, guid: 2eaf63e0dad480e40a6a9dcaccbe283a,
+  m_Sprite: {fileID: -5389458188949066210, guid: d38ac83c025f18243b81a30e26eaf4d1,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 6.92, y: 2.25}
+  m_Size: {x: 5.84, y: 2.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -182,7 +182,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6823979575602648333}
-  - component: {fileID: 1859296639058491599}
   - component: {fileID: 8390948188678076437}
   - component: {fileID: 6270847121899565780}
   m_Layer: 0
@@ -208,23 +207,6 @@ Transform:
   - {fileID: 7790335634717067193}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1859296639058491599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4778496704631022715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a247e7403527b9418a4d455fcf4c876, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _move: 10
-  swordAnim: {fileID: 6555084909539739565}
-  _timer: 0
-  _intrval: 1
-  IsSwordAlive: 1
 --- !u!70 &8390948188678076437
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -273,10 +255,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _move: 10
-  spearAnim: {fileID: 0}
+  spearAnim: {fileID: 6555084909539739565}
   _timer: 0
   _intrval: 1
-  IsSpearAlive: 1
 --- !u!1 &4944452622280600672
 GameObject:
   m_ObjectHideFlags: 0
