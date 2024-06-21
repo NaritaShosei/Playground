@@ -24,7 +24,7 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         _time -= Time.deltaTime;
-        _timeText.text = _time.ToString("F1");
+        _timeText.text = "Time : " +_time.ToString("F1");
         if (ScoreCount.score == scoreLine)
         {
             _time += _pulusTime;

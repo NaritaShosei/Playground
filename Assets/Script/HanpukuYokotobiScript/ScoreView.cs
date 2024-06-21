@@ -8,7 +8,7 @@ public class ScoreView : MonoBehaviour
     [SerializeField] Text scoreText;
     private void Start()
     {
-        scoreText.text = ScoreCount.score.ToString();
+        scoreText.text = "Score : " + ScoreCount.score.ToString();
     }
 
 }

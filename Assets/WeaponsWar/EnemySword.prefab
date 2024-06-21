@@ -51,7 +51,6 @@ MonoBehaviour:
   _attackRange: 3
   swordAnim: {fileID: 2910134665909377092}
   _interval: 3
-  _timer: 0
 --- !u!50 &6501066095050336270
 Rigidbody2D:
   serializedVersion: 4
@@ -111,8 +110,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.25}
-  m_Size: {x: 0.37, y: 1.65}
+  m_Offset: {x: 0, y: 0.31}
+  m_Size: {x: 0.44, y: 1.95}
   m_Direction: 0
 --- !u!1 &6249671771563716533
 GameObject:
@@ -153,7 +152,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6249671771563716533}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -341,9 +340,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.67}
+  m_Offset: {x: 0, y: 1.84}
   serializedVersion: 2
-  m_Radius: 2.66
+  m_Radius: 1.71
 --- !u!114 &3052385147709383787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,7 +384,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.042356063, y: 0.8577101, z: 0}
-  m_LocalScale: {x: 0.95332813, y: 2.0409865, z: 2.6472535}
+  m_LocalScale: {x: 0.26812354, y: 2.615014, z: 2.6472535}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5591393434951720155}
@@ -434,13 +433,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
+  m_Sprite: {fileID: 639922747271519384, guid: 0c8a2a7c17c325746bfbfb846fd72970, type: 3}
   m_Color: {r: 0, g: 0.9476228, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 1
+  m_Size: {x: 5, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -485,7 +483,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6684845380066012567}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -570,7 +568,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8675975643481195378}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

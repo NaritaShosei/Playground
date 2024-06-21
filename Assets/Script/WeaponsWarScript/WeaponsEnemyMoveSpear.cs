@@ -34,6 +34,7 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _timer += Time.deltaTime;
         if (_playerTransform != null)
         {
 
@@ -48,7 +49,6 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
             // w’è‚µ‚½‹——£‚æ‚è’Z‚­‚È‚Á‚½‚çUŒ‚‚·‚é
             if (Vector2.Distance(_playerTransform.position, transform.position) <= _attackRange)
             {
-                _timer += Time.deltaTime;
                 _rigidbody.velocity = new Vector2(0, 0);
                 if (_timer > _interval)
                 {
