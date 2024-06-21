@@ -7,8 +7,8 @@ public class EnemyGenerator : MonoBehaviour
     [Header("敵のPrefab")]
     [SerializeField] private GameObject[] _enemyObjects;
     [Header("スポーンのインターバル")]
-    [SerializeField] private float _interval = 1;
-    private float _timer = 0;
+    [SerializeField] public float _interval = 1;
+    public float _timer = 0;
     [Header("スポーンの中心点")]
     [SerializeField] private Vector2 _spawnFieldCentorPoint;
     [Header("スポーンの幅")]

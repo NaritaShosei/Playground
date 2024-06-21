@@ -12,6 +12,7 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
     [SerializeField] float _interval = 2f;
     float _timer = 0f;
     WeaponsHP damage;
+    EnemyGenerator EnemyGenerator;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,9 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
         if (Vector2.Distance(_playerTransform.position, this.transform.position) < 5)
         {
             Destroy(this.gameObject);
+            EnemyGenerator._timer = EnemyGenerator._interval;
         }
+        EnemyGenerator = GameObject.Find("Main Camera").GetComponent<EnemyGenerator>();
     }
 
     // Update is called once per frame

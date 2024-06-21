@@ -173,7 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb451e2bc2f0cd44bf53ec7da8e13d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timer: 0
   _text: {fileID: 8623063}
   IsSurvive: 1
 --- !u!114 &8623063
@@ -456,6 +455,7 @@ MonoBehaviour:
   - {fileID: 2130112201049702537, guid: 608c056b7cda6eb46bc4f43daabb6cde, type: 3}
   - {fileID: 3007322875093615161, guid: df0f7a339020dcb4dbec36e4ac32ce87, type: 3}
   _interval: 2
+  _timer: 0
   _spawnFieldCentorPoint: {x: 0, y: 0}
   _spawnField: {x: 30, y: 15}
   _playerTransform: {fileID: 1176974937}
