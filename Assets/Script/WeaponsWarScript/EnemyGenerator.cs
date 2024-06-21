@@ -72,3 +72,4 @@ public class EnemyGenerator : MonoBehaviour
 
     }
 }
+//‚Ù‚Ú‹³‚¦‚Ä‚à‚ç‚Á‚½‚â‚Â

@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -261,7 +261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.65800005, y: 0.58714294}
-  m_AnchoredPosition: {x: -38, y: -325}
+  m_AnchoredPosition: {x: -64, y: -469}
   m_SizeDelta: {x: 99921, y: 856.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &922558154
@@ -286,16 +286,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ba493349e62563e4e8c069fc174701da, type: 3}
-    m_FontSize: 95
+    m_FontSize: 208
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 183
+    m_MaxSize: 300
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 0
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Please Enter Key
 --- !u!222 &922558155
@@ -521,7 +521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 890, y: 141}
+  m_AnchoredPosition: {x: 757, y: 348}
   m_SizeDelta: {x: 2285.8, y: 320.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276305734
@@ -546,7 +546,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 8e7434dcc8e236a41a3d1478ba862497, type: 3}
-    m_FontSize: 70
+    m_FontSize: 111
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -905,7 +905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -486.11}
+  m_AnchoredPosition: {x: 0, y: -613}
   m_SizeDelta: {x: 345.64, y: 530.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849323813
@@ -930,11 +930,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ba493349e62563e4e8c069fc174701da, type: 3}
-    m_FontSize: 79
+    m_FontSize: 140
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 79
+    m_MaxSize: 140
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
