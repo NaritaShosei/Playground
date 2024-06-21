@@ -18,10 +18,10 @@ public class Select : MonoBehaviour
     }
     public void SelectedSword()
     {
-        _selectedWeapon = 0;
+        PlayerGenerator.playerAlive = PlayerGenerator.PlayerAlive.sword;
     }
     public void SelectedSpear()
     {
-        _selectedWeapon = 1;
+        PlayerGenerator.playerAlive = PlayerGenerator.PlayerAlive.spear;
     }
 }

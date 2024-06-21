@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponsHP : MonoBehaviour
 {
-    [SerializeField] public float _hp = 5f;
+    public float _hp = 5f;
     public bool IsInvincible;
     public bool IsAlive = true;
     // Start is called before the first frame update

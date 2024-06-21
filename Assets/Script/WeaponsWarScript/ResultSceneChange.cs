@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ResultSceneChange : MonoBehaviour
 {
-    [SerializeField] WeaponsPlayerMoveSword _weaponsPlayerMoveSword;
-    [SerializeField] WeaponsPlayerMoveSpear _weaponsPlayerMoveSpear;
     SceneChangeManager _sceneChangeManager;
     // Start is called before the first frame update
     void Start()
@@ -16,9 +14,12 @@ public class ResultSceneChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_weaponsPlayerMoveSword.IsSwordAlive && !_weaponsPlayerMoveSpear.IsSpearAlive)
+        Debug.Log(WeaponsPlayerMoveSpear.IsSpearAlive);
+        Debug.Log(WeaponsPlayerMoveSword.IsSwordAlive);
+        if (WeaponsPlayerMoveSword.IsSwordAlive == false && WeaponsPlayerMoveSpear.IsSpearAlive == false)
         {
             _sceneChangeManager.Result();
+            Debug.Log("‘S–Å");
         }
     }
 }

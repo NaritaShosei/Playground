@@ -580,6 +580,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSpear
       objectReference: {fileID: 0}
+    - target: {fileID: 4778496704631022715, guid: 66a6980a2c289f544aebd3413cf591a2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6823979575602648333, guid: 66a6980a2c289f544aebd3413cf591a2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -641,18 +646,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 859482923}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &859482925 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6270847121899565780, guid: 66a6980a2c289f544aebd3413cf591a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 859482923}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859482924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 183ab8bef586ec241b7eb862406e0ca3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1082532083
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,8 +703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1a0dc817e2f6a49bd0c4aa182a6ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponsPlayerMoveSword: {fileID: 2010652407}
-  _weaponsPlayerMoveSpear: {fileID: 859482925}
 --- !u!4 &1176974937 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4621365741270412829, guid: 9b31ff1794922c4418533621e6edec93,
@@ -1099,6 +1090,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 26359658316220428, guid: 9b31ff1794922c4418533621e6edec93,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1274851875500265942, guid: 9b31ff1794922c4418533621e6edec93,
         type: 3}
       propertyPath: _enemySpear
@@ -1217,18 +1213,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1786543629}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2010652407 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1274851875500265942, guid: 9b31ff1794922c4418533621e6edec93,
-    type: 3}
-  m_PrefabInstance: {fileID: 1786543629}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010652406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a247e7403527b9418a4d455fcf4c876, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

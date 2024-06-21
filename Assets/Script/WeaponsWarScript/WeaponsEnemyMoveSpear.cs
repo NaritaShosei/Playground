@@ -16,13 +16,8 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
     {
         damage = GetComponentInChildren<WeaponsHP>();
         _rigidbody = GetComponent<Rigidbody2D>();
-        GameObject player = GameObject.Find("PlayerSword");
         EnemyGenerator = GameObject.Find("Main Camera").GetComponent<EnemyGenerator>();
-
-        if (player.TryGetComponent<Transform>(out var transform))
-        {
-            _playerTransform = transform;
-        }
+        _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         if (Vector2.Distance(_playerTransform.position, this.transform.position) < 5)
         {
             Debug.Log("”j‰ó‚³‚ê‚½");

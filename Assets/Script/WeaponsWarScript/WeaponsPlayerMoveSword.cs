@@ -12,12 +12,10 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
     WeaponsHP _damage;
     bool _isAttackOnStart = true;
     WeaponsWarTimeManager _weaponsWarTimeManager;
-    SceneChangeManager _sceneChangeManager;
-    public bool IsSwordAlive = true;
+    public static bool IsSwordAlive = true;
     void Start()
     {
         _weaponsWarTimeManager = GameObject.Find("Time").GetComponent<WeaponsWarTimeManager>();
-        _sceneChangeManager = GameObject.Find("SceneChange").GetComponent<SceneChangeManager>();
         _damage = GetComponentInChildren<WeaponsHP>();
 
         if (_isAttackOnStart)
@@ -41,9 +39,9 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
         if (_damage._hp <= 0)
         {
             _damage.IsAlive = false;
-            Destroy(gameObject, 1);
             _weaponsWarTimeManager.IsSurvive = false;
             IsSwordAlive = false;
+            Destroy(gameObject, 1);
             //Invoke("SceneChange", 1.2f);
         }
 

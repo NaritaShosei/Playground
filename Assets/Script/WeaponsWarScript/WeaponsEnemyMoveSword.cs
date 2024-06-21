@@ -18,13 +18,14 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
     {
         damage = GetComponentInChildren<WeaponsHP>();
         _rigidbody = GetComponent<Rigidbody2D>();
-        GameObject player = GameObject.Find("PlayerSword");
+        //GameObject player = GameObject.Find("PlayerSword");
+        _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         EnemyGenerator = GameObject.Find("Main Camera").GetComponent<EnemyGenerator>();
 
-        if (player.TryGetComponent<Transform>(out var transform))
-        {
-            _playerTransform = transform;
-        }
+        //if (player.TryGetComponent<Transform>(out var transform))
+        //{
+        //    _playerTransform = transform;
+        //}
         if (Vector2.Distance(_playerTransform.position, this.transform.position) < 5)
         {
             Debug.Log("”j‰ó‚³‚ê‚½");
