@@ -11,13 +11,15 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
     [SerializeField] float _intrval = 1f;
     [SerializeField] GameObject _enemySword;
     [SerializeField] GameObject _enemySpear;
-    WeaponsHP damage;
+    WeaponsHP _damage;
     bool _isAttackOnStart = true;
-    WeaponsWarTimeManager weaponsWarTimeManager;
+    WeaponsWarTimeManager _weaponsWarTimeManager;
+    SceneChangeManager _sceneChangeManager;
     void Start()
     {
-        weaponsWarTimeManager = GameObject.Find("Time").GetComponent<WeaponsWarTimeManager>();
-        damage = GetComponentInChildren<WeaponsHP>();
+        _weaponsWarTimeManager = GameObject.Find("Time").GetComponent<WeaponsWarTimeManager>();
+        _sceneChangeManager = GameObject.Find("SceneChange").GetComponent<SceneChangeManager>();
+        _damage = GetComponentInChildren<WeaponsHP>();
 
         if (_isAttackOnStart)
         {
@@ -37,11 +39,11 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
         var pos = Camera.main.WorldToScreenPoint(transform.localPosition);
         var rotation = Quaternion.LookRotation(Vector3.forward, Input.mousePosition - pos);
         transform.rotation = rotation;
-        if (damage._hp <= 0)
+        if (_damage._hp <= 0)
         {
             Destroy(gameObject);
-            weaponsWarTimeManager.IsSurvive = false;
-            SceneChangeManager.Result();
+            _weaponsWarTimeManager.IsSurvive = false;
+            _sceneChangeManager.Result();
         }
 
     }
@@ -54,7 +56,7 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
         {
             if (HP3.IsInvincible || HP3.IsInvincible)
             {
-                damage.Damage(1);
+                _damage.Damage(1);
             }
         }
 

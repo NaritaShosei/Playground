@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponsEnemyMoveSpear : MonoBehaviour
@@ -20,6 +18,7 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _timer = _interval;
         GameObject player = GameObject.Find("PlayerSword");
+        EnemyGenerator = GameObject.Find("Main Camera").GetComponent<EnemyGenerator>();
 
         if (player.TryGetComponent<Transform>(out var transform))
         {
@@ -27,10 +26,10 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
         }
         if (Vector2.Distance(_playerTransform.position, this.transform.position) < 5)
         {
-            Destroy(this.gameObject);
+            Debug.Log("”j‰ó‚³‚ê‚½");
             EnemyGenerator._timer = EnemyGenerator._interval;
+            Destroy(this.gameObject);
         }
-        EnemyGenerator = GameObject.Find("Main Camera").GetComponent<EnemyGenerator>();
     }
 
     // Update is called once per frame
@@ -79,7 +78,6 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
     {
         swordAnim.Play("SpearAttackAnim");
         _timer = 0f;
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

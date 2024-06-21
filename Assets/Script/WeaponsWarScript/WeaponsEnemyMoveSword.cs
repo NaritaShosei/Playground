@@ -20,6 +20,7 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _timer = _interval;
         GameObject player = GameObject.Find("PlayerSword");
+        EnemyGenerator = GameObject.Find("Main Camera").GetComponent<EnemyGenerator>();
 
         if (player.TryGetComponent<Transform>(out var transform))
         {
@@ -27,11 +28,10 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
         }
         if (Vector2.Distance(_playerTransform.position, this.transform.position) < 5)
         {
-            Destroy(this.gameObject);
-            EnemyGenerator._timer = EnemyGenerator._interval;
             Debug.Log("”j‰ó‚³‚ê‚½");
+            EnemyGenerator._timer = EnemyGenerator._interval;
+            Destroy(this.gameObject);
         }
-        EnemyGenerator = GameObject.Find("Main Camera").GetComponent<EnemyGenerator>();
     }
 
     // Update is called once per frame

@@ -16,15 +16,15 @@ public class SceneChangeManager : MonoBehaviour
     {
 
     }
-    public static void Title()
+    public  void Title()
     {
         SceneManager.LoadScene("WeaponsWarTitle");
     }
-    public static void InGame()
+    public  void InGame()
     {
         SceneManager.LoadScene("WeaponsWar");
     }
-    public static void Result()
+    public  void Result()
     {
         SceneManager.LoadScene("WeaponsWarResult");
     }

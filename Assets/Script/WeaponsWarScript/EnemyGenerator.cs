@@ -38,38 +38,17 @@ public class EnemyGenerator : MonoBehaviour
                 spawnPoint.x = Random.Range(_playerTransform.position.x - _spawnField.x / 2, _playerTransform.position.x + _spawnField.x / 2);
             }
         }
-
-        //switch (spawnArea)
-        //{
-        //    case SpawnArea.up:
-        //        spawnPoint.y = _spawnField.y / 2;
-        //        break;
-        //    case SpawnArea.down:
-        //        spawnPoint.y = _spawnField.y / 2;
-        //        break;
-        //    case SpawnArea.right:
-        //        spawnPoint.x = _spawnField.x / 2;
-        //        break;
-        //    case SpawnArea.left:
-        //        spawnPoint.x = _spawnField.x / 2;
-        //        break;
-
-        //}
-
         int randomEnemyIndex = Random.Range(0, _enemyObjects.Length);
         Instantiate(_enemyObjects[randomEnemyIndex], spawnPoint, Quaternion.identity);
     }
     private void Update()
     {
-
-
         _timer += Time.deltaTime;
         if (_timer > _interval)
         {
             EnemySpawn();
             _timer = 0;
         }
-
     }
 }
 //‚Ù‚Ú‹³‚¦‚Ä‚à‚ç‚Á‚½‚â‚Â
