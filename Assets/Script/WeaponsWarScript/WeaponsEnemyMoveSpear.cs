@@ -16,7 +16,6 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
     {
         damage = GetComponentInChildren<WeaponsHP>();
         _rigidbody = GetComponent<Rigidbody2D>();
-        _timer = _interval;
         GameObject player = GameObject.Find("PlayerSword");
         EnemyGenerator = GameObject.Find("Main Camera").GetComponent<EnemyGenerator>();
 
@@ -41,7 +40,6 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
             var rotation = Quaternion.LookRotation(Vector3.forward, _playerTransform.position - transform.position);
             transform.rotation = rotation;
             // Debug.Log($"time{_timer}");
-            _timer += Time.deltaTime;
             // é©êgÇ∆ëäéËÇÃäpìxÇÇ∆ÇÈ
             float angle = Mathf.Atan2(_playerTransform.position.y - transform.position.y, _playerTransform.position.x - transform.position.x);
 
@@ -50,6 +48,7 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
             // éwíËÇµÇΩãóó£ÇÊÇËíZÇ≠Ç»Ç¡ÇΩÇÁçUåÇÇ∑ÇÈ
             if (Vector2.Distance(_playerTransform.position, transform.position) <= _attackRange)
             {
+                _timer += Time.deltaTime;
                 _rigidbody.velocity = new Vector2(0, 0);
                 if (_timer > _interval)
                 {

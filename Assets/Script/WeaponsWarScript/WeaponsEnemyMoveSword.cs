@@ -18,7 +18,6 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
     {
         damage = GetComponentInChildren<WeaponsHP>();
         _rigidbody = GetComponent<Rigidbody2D>();
-        _timer = _interval;
         GameObject player = GameObject.Find("PlayerSword");
         EnemyGenerator = GameObject.Find("Main Camera").GetComponent<EnemyGenerator>();
 
@@ -37,6 +36,7 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _timer += Time.deltaTime;
         if (_playerTransform != null)
         {
             var roatation = Quaternion.LookRotation(Vector3.forward, _playerTransform.position - transform.position);
@@ -47,7 +47,6 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
 
 
             // Debug.Log($"time{_timer}");
-            _timer += Time.deltaTime;
             // é©êgÇ∆ëäéËÇÃäpìxÇÇ∆ÇÈ
 
 

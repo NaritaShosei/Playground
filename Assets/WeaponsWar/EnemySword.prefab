@@ -50,7 +50,8 @@ MonoBehaviour:
   _enemyMoveSpeed: 5
   _attackRange: 3
   swordAnim: {fileID: 2910134665909377092}
-  _interval: 5
+  _interval: 3
+  _timer: 0
 --- !u!50 &6501066095050336270
 Rigidbody2D:
   serializedVersion: 4
