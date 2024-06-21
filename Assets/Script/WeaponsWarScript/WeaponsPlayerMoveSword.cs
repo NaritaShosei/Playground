@@ -41,9 +41,10 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
         transform.rotation = rotation;
         if (_damage._hp <= 0)
         {
-            Destroy(gameObject);
+            _damage.IsAlive = false;
+            Destroy(gameObject, 1);
             _weaponsWarTimeManager.IsSurvive = false;
-            _sceneChangeManager.Result();
+            //Invoke("SceneChange", 1.2f);
         }
 
     }
@@ -59,9 +60,10 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
                 _damage.Damage(1);
             }
         }
-
-
-
+    }
+    private void OnDestroy()
+    {
+        _sceneChangeManager.Result();
     }
     //public void D(int d) => _hp = IsInvincible ? _hp : _hp - d;
 }

@@ -14,7 +14,6 @@ public class SceneChangeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
     public  void Title()
     {
@@ -27,5 +26,10 @@ public class SceneChangeManager : MonoBehaviour
     public  void Result()
     {
         SceneManager.LoadScene("WeaponsWarResult");
+    }
+    //変数にシーンの名前を入れるとそのシーンに代わる
+    public void SceneChange(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

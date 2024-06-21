@@ -17,22 +17,22 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/BikeRun/Clear.unity
     guid: 741e4b885eefa2e4e822e68d8b475815
-  - enabled: 1
+  - enabled: 0
     path: Assets/HanpukuYokotobi/TitleHY.unity
     guid: 5d5e81541346b6743bd2688c5c9c147e
-  - enabled: 1
+  - enabled: 0
     path: Assets/HanpukuYokotobi/HanpukuYokotobi.unity
     guid: 7f5641c776106214fa161b4948cffd68
-  - enabled: 1
+  - enabled: 0
     path: Assets/HanpukuYokotobi/Result.unity
     guid: e0edfbfaf2f506541b7ad12b5a11082c
-  - enabled: 0
+  - enabled: 1
     path: Assets/WeaponsWar/WeaponsWarTitle.unity
     guid: 9a1f74e92b500274094a8c4c06f52025
-  - enabled: 0
+  - enabled: 1
     path: Assets/WeaponsWar/WeaponsWar.unity
     guid: e4f98cb58f9bf9246867f95ea5ab8809
-  - enabled: 0
+  - enabled: 1
     path: Assets/WeaponsWar/WeaponsWarResult.unity
     guid: 10190f6378aa96e4394020d3ade51b55
   m_configObjects: {}

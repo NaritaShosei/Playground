@@ -6,19 +6,21 @@ public class WeaponsHP : MonoBehaviour
 {
     [SerializeField] public float _hp = 5f;
     public bool IsInvincible;
+    public bool IsAlive = true;
     // Start is called before the first frame update
     void Start()
     {
-
+        IsAlive = true;
     }
     public void Damage(float damage)
     {
         if (!IsInvincible)
         {
-            _hp -= damage;
-            
+            if (IsAlive)
+            {
+                _hp -= damage;
+            }
         }
-
     }
 
     // Update is called once per frame

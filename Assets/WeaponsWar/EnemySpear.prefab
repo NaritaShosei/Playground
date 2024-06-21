@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5972751609208831152
 Transform:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &858978358777992105
 Transform:
   m_ObjectHideFlags: 0
@@ -182,7 +182,6 @@ GameObject:
   - component: {fileID: 8314914382220602742}
   - component: {fileID: 2688326946110155641}
   - component: {fileID: 1313034974338846855}
-  - component: {fileID: 4881647689981157362}
   m_Layer: 0
   m_Name: EnemySpear
   m_TagString: Untagged
@@ -284,41 +283,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.21, y: 2.22}
   m_Direction: 0
---- !u!70 &4881647689981157362
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3007322875093615161}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.7}
-  m_Size: {x: 0.89, y: 0.79}
-  m_Direction: 1
 --- !u!1 &3550676028515193748
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8227913271119323613
 Transform:
   m_ObjectHideFlags: 0
@@ -420,7 +384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8456894863949807578
 Transform:
   m_ObjectHideFlags: 0
@@ -505,7 +469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7812767058351173689
 Transform:
   m_ObjectHideFlags: 0
@@ -590,7 +554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &359928042158948564
 Transform:
   m_ObjectHideFlags: 0
@@ -686,7 +650,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.042356063, y: 0.8577101, z: 0}
-  m_LocalScale: {x: 0.38800454, y: 5.694352, z: 2.6472535}
+  m_LocalScale: {x: 0.097001135, y: 10.498961, z: 2.6472535}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 380662861520921510}
@@ -732,13 +696,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+  m_Sprite: {fileID: -5389458188949066210, guid: d38ac83c025f18243b81a30e26eaf4d1,
     type: 3}
-  m_Color: {r: 0, g: 0.9450981, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.9370303, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 1
+  m_Size: {x: 13.66, y: 0.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

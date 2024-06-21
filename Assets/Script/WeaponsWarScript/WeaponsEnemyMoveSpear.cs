@@ -44,7 +44,7 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
             // ©g‚Æ‘Šè‚ÌŠp“x‚ğ‚Æ‚é
             float angle = Mathf.Atan2(_playerTransform.position.y - transform.position.y, _playerTransform.position.x - transform.position.x);
 
-            Vector2 Axis = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+            Vector2 direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
 
             // w’è‚µ‚½‹——£‚æ‚è’Z‚­‚È‚Á‚½‚çUŒ‚‚·‚é
             if (Vector2.Distance(_playerTransform.position, transform.position) <= _attackRange)
@@ -58,7 +58,7 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
             }
             else
             {
-                _rigidbody.velocity = new Vector2(Axis.x * _enemyMoveSpeed, Axis.y * _enemyMoveSpeed);
+                _rigidbody.velocity = new Vector2(direction.x * _enemyMoveSpeed, direction.y * _enemyMoveSpeed);
             }
         }
         if (_playerTransform == null)
