@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/BikeRun/Title.unity
     guid: 67949dbccdfc9344a8fe02a1fb98db4c
-  - enabled: 0
+  - enabled: 1
     path: Assets/BikeRun/BikeRun.unity
     guid: 77f0bf4766b909649a0c210bd6dcd788
-  - enabled: 0
+  - enabled: 1
     path: Assets/BikeRun/GameOver.unity
     guid: f1bbaa125f2e4844baa8979f2da424f7
-  - enabled: 0
+  - enabled: 1
     path: Assets/BikeRun/Clear.unity
     guid: 741e4b885eefa2e4e822e68d8b475815
   - enabled: 0
@@ -26,13 +26,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/HanpukuYokotobi/Result.unity
     guid: e0edfbfaf2f506541b7ad12b5a11082c
-  - enabled: 1
+  - enabled: 0
     path: Assets/WeaponsWar/WeaponsWarTitle.unity
     guid: 9a1f74e92b500274094a8c4c06f52025
-  - enabled: 1
+  - enabled: 0
     path: Assets/WeaponsWar/WeaponsWar.unity
     guid: e4f98cb58f9bf9246867f95ea5ab8809
-  - enabled: 1
+  - enabled: 0
     path: Assets/WeaponsWar/WeaponsWarResult.unity
     guid: 10190f6378aa96e4394020d3ade51b55
   m_configObjects: {}

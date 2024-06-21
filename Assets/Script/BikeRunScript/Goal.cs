@@ -31,5 +31,10 @@ public class Goal : MonoBehaviour
         {
             SceneManager.LoadScene("Clear");
         }
+        if (collision.gameObject.tag == "Rock")
+        {
+            Destroy(collision.gameObject);
+            Debug.Log("Šâ‚ª”j‰ó‚³‚ê‚½");
+        }
     }
 }
