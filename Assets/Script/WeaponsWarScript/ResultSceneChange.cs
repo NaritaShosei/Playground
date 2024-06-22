@@ -5,6 +5,8 @@ using UnityEngine;
 public class ResultSceneChange : MonoBehaviour
 {
     SceneChangeManager _sceneChangeManager;
+    float _timer = 0;
+    [SerializeField] float _changeTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +20,12 @@ public class ResultSceneChange : MonoBehaviour
         Debug.Log(WeaponsPlayerMoveSword.IsSwordAlive);
         if (WeaponsPlayerMoveSword.IsSwordAlive == false && WeaponsPlayerMoveSpear.IsSpearAlive == false)
         {
-            _sceneChangeManager.Result();
-            Debug.Log("‘S–Å");
+            _timer += Time.deltaTime;
+            if (_timer >= _changeTime)
+            {
+                _sceneChangeManager.Result();
+                Debug.Log("‘S–Å");
+            }
         }
     }
 }

@@ -11,6 +11,9 @@ public class WeaponsPlayerMoveSpear : MonoBehaviour
     [Header("攻撃のインターバル")]
     float _timer = 0;
     [SerializeField] float _intrval = 1f;
+    [Header("破壊された時のエフェクトと音")]
+    [SerializeField] GameObject _effect;
+    [SerializeField] GameObject _prefab;
     WeaponsHP _damage;
     bool _isAttackOnStart = true;
     WeaponsWarTimeManager _weaponsWarTimeManager;
@@ -43,7 +46,11 @@ public class WeaponsPlayerMoveSpear : MonoBehaviour
             _damage.IsAlive = false;
             _weaponsWarTimeManager.IsSurvive = false;
             IsSpearAlive = false;
-            Destroy(gameObject, 1);
+            Instantiate(_effect, transform.position, Quaternion.identity);
+            Destroy(_effect, 1.0f);
+            Instantiate(_prefab, transform.position, Quaternion.identity);
+            Destroy(_prefab, 1.0f);
+            Destroy(gameObject);
         }
 
     }

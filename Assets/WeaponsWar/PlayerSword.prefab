@@ -46,14 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a247e7403527b9418a4d455fcf4c876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _move: 10
+  _moveSpeed: 1
   swordAnim: {fileID: 8297778619709549976}
-  _timer: 0
   _intrval: 1
-  _enemySword: {fileID: 2130112201049702537, guid: 608c056b7cda6eb46bc4f43daabb6cde,
-    type: 3}
-  _enemySpear: {fileID: 3007322875093615161, guid: df0f7a339020dcb4dbec36e4ac32ce87,
-    type: 3}
+  _effect: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+  _prefab: {fileID: 7288071866662378176, guid: ffcdd0b63cede044ca24c3de0da143f0, type: 3}
 --- !u!70 &3030698089330993636
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -397,6 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hp: 5
   IsInvincible: 0
+  IsAlive: 1
 --- !u!212 &76688768084657136
 SpriteRenderer:
   m_ObjectHideFlags: 0
