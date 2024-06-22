@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class WeaponsEnemyMoveSpear : MonoBehaviour
 {
+    [Header("移動のスピード")]
     [SerializeField] float _enemyMoveSpeed = 1f;
     Transform _playerTransform;
+    [Header("これ以上プレイヤーに近づいたら攻撃")]
     [SerializeField] float _attackRange;
+    [Header("攻撃のアニメーション")]
     [SerializeField] Animator swordAnim;
     Rigidbody2D _rigidbody;
+    [Header("攻撃するまでの時間")]
     [SerializeField] float _interval = 2f;
     float _timer = 0f;
     WeaponsHP damage;
@@ -64,6 +68,7 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
         }
         if (damage._hp <= 0)
         {
+            ScoreManager._score += ScoreManager._screUp;
             Destroy(gameObject);
         }
     }

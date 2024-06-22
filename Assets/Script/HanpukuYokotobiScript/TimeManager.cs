@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField] public float _time = 0f;
-    [SerializeField] public float _pulusTime = 5f;
+    public float _time = 0f;
+    public float _pulusTime = 5f;
     Text _timeText;
     public bool IsInGame = true;
     AudioSource _audioSource;

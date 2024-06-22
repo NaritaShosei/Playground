@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class WeaponsHP : MonoBehaviour
 {
+    [Header("‘Ì—Í")]
     public float _hp = 5f;
+    [Header("–³“G”»’è")]
     public bool IsInvincible;
+    [Header("¶€”»’è")]
     public bool IsAlive = true;
     // Start is called before the first frame update
     void Start()

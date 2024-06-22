@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerGenerator : MonoBehaviour
 {
+    [Header("ƒvƒŒƒCƒ„[")]
     [SerializeField] GameObject _playerSword;
     [SerializeField] GameObject _playerSpear;
     CinemachineVirtualCamera _cinemachine;

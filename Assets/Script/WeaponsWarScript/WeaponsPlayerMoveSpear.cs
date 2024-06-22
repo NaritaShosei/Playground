@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class WeaponsPlayerMoveSpear : MonoBehaviour
 {
-
-    [SerializeField] float _move = 1f;
+    [Header("移動のスピード")]
+    [SerializeField] float _moveSpeed = 1f;
+    [Header("攻撃のアニメーション")]
     [SerializeField] Animator spearAnim;
-    [SerializeField] float _timer = 0;
+    [Header("攻撃のインターバル")]
+    float _timer = 0;
     [SerializeField] float _intrval = 1f;
     WeaponsHP _damage;
     bool _isAttackOnStart = true;
@@ -31,8 +33,8 @@ public class WeaponsPlayerMoveSpear : MonoBehaviour
             _timer = 0;
             spearAnim.Play("SpearAttackAnim");
         }
-        transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * Time.deltaTime * _move, 0f, 0f);
-        transform.position += new Vector3(0, Input.GetAxisRaw("Vertical") * Time.deltaTime * _move, 0f);
+        transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * Time.deltaTime * _moveSpeed, 0f, 0f);
+        transform.position += new Vector3(0, Input.GetAxisRaw("Vertical") * Time.deltaTime * _moveSpeed, 0f);
         var pos = Camera.main.WorldToScreenPoint(transform.localPosition);
         var rotation = Quaternion.LookRotation(Vector3.forward, Input.mousePosition - pos);
         transform.rotation = rotation;
@@ -50,7 +52,7 @@ public class WeaponsPlayerMoveSpear : MonoBehaviour
         WeaponsHP HP = collision.gameObject.GetComponent<WeaponsHP>();
         if (HP != null)
         {
-            if (HP.IsInvincible || HP.IsInvincible)
+            if (HP.IsInvincible)
             {
                 _damage.Damage(1);
             }

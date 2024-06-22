@@ -5,25 +5,38 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangeManager : MonoBehaviour
 {
+    AudioSource _selectAudio;
+    public int _pushCount;
     // Start is called before the first frame update
     void Start()
     {
-
+        _selectAudio = GetComponent<AudioSource>();
+        _pushCount = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
     }
-    public  void Title()
+    public void Title()
     {
-        SceneManager.LoadScene("WeaponsWarTitle");
+        if (_pushCount == 0)
+        {
+            _selectAudio.Play();
+            Invoke(nameof(GetTitle), 1f);
+        }
+        _pushCount = 1;
     }
-    public  void InGame()
+    public void InGame()
     {
-        SceneManager.LoadScene("WeaponsWar");
+        if (_pushCount == 0)
+        {
+            _selectAudio.Play();
+            Invoke(nameof(GetInGame), 1f);
+        }
+        _pushCount = 1;
     }
-    public  void Result()
+    public void Result()
     {
         SceneManager.LoadScene("WeaponsWarResult");
     }
@@ -31,5 +44,13 @@ public class SceneChangeManager : MonoBehaviour
     public void SceneChange(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+    public void GetTitle()
+    {
+        SceneManager.LoadScene("WeaponsWarTitle");
+    }
+    public void GetInGame()
+    {
+        SceneManager.LoadScene("WeaponsWar");
     }
 }

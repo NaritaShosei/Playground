@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 1313034974338846855}
   m_Layer: 0
   m_Name: EnemySpear
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,7 +281,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.21, y: 2.22}
+  m_Size: {x: 0.54, y: 2.22}
   m_Direction: 0
 --- !u!1 &3550676028515193748
 GameObject:
@@ -696,8 +696,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5389458188949066210, guid: d38ac83c025f18243b81a30e26eaf4d1,
-    type: 3}
+  m_Sprite: {fileID: 639922747271519384, guid: 0c8a2a7c17c325746bfbfb846fd72970, type: 3}
   m_Color: {r: 0, g: 0.9370303, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -856,7 +855,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01, y: 1.04}
+  m_Offset: {x: -0.01, y: 0.84}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -867,7 +866,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.14, y: 5.62}
+  m_Size: {x: 1.5, y: 6.32}
   m_EdgeRadius: 0
 --- !u!114 &7265438298082127907
 MonoBehaviour:
@@ -883,3 +882,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hp: 1
   IsInvincible: 0
+  IsAlive: 0
