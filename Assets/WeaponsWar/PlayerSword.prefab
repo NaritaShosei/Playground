@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a247e7403527b9418a4d455fcf4c876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 1
+  _moveSpeed: 7
   swordAnim: {fileID: 8297778619709549976}
   _intrval: 1
   _effect: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}

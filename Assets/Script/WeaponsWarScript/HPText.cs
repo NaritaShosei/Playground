@@ -24,11 +24,11 @@ public class HPText : MonoBehaviour
     {
         if (PlayerGenerator.playerAlive == PlayerGenerator.PlayerAlive.sword)
         {
-            _textHp.text = "HP:" + _playerSwordHP._hp.ToString();
+            _textHp.text = "残機 :" + _playerSwordHP._hp.ToString();
         }
         else if (PlayerGenerator.playerAlive == PlayerGenerator.PlayerAlive.spear)
         {
-            _textHp.text = "HP:" + _playerSpearHP._hp.ToString();
+            _textHp.text = "残機 :" + _playerSpearHP._hp.ToString();
         }
     }
 }

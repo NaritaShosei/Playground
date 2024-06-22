@@ -18,6 +18,6 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _scoreText.text = "SCORE : " + _score.ToString();
+        _scoreText.text = "“¾“_ : " + _score.ToString();
     }
 }

@@ -11,7 +11,7 @@ public class TimeView : MonoBehaviour
     void Start()
     {
         _timeText.text = WeaponsWarTimeManager._timer.ToString("F2") + " ïbä‘Ç¢Ç´ÇÃÇ—ÇΩÅIÅI";
-        _scoreText.text = "SCORE : " + ScoreManager._score.ToString();
+        _scoreText.text = "ìæì_ : " + ScoreManager._score.ToString();
     }
 
     // Update is called once per frame
