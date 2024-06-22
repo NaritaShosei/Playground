@@ -26,17 +26,11 @@ public class PlayerGenerator : MonoBehaviour
             Destroy(_playerSpear);
             _cinemachine.Follow = _playerSword.transform;
         }
-        if (PlayerGenerator.playerAlive == PlayerAlive.spear)
+        if (PlayerGenerator.playerAlive == PlayerGenerator.PlayerAlive.spear)
         {
             WeaponsPlayerMoveSword.IsSwordAlive = false;
             Destroy(_playerSword);
             _cinemachine.Follow = _playerSpear.transform;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
