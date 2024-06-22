@@ -35,8 +35,8 @@ public class WeaponsPlayerMoveSpear : MonoBehaviour
         }
         transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * Time.deltaTime * _moveSpeed, 0f, 0f);
         transform.position += new Vector3(0, Input.GetAxisRaw("Vertical") * Time.deltaTime * _moveSpeed, 0f);
-        var pos = Camera.main.WorldToScreenPoint(transform.localPosition);
-        var rotation = Quaternion.LookRotation(Vector3.forward, Input.mousePosition - pos);
+        Vector3 pos = Camera.main.WorldToScreenPoint(transform.localPosition);
+        Quaternion rotation = Quaternion.LookRotation(Vector3.forward, Input.mousePosition - pos);
         transform.rotation = rotation;
         if (_damage._hp <= 0)
         {

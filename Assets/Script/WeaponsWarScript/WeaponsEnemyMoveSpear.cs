@@ -48,7 +48,7 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
             // w’è‚µ‚½‹——£‚æ‚è’Z‚­‚È‚Á‚½‚çUŒ‚‚·‚é
             if (Vector2.Distance(_playerTransform.position, transform.position) <= _attackRange)
             {
-                _rigidbody.velocity = new Vector2(0, 0);
+                _rigidbody.velocity = Vector2.zero;
                 if (_timer > _interval)
                 {
 
