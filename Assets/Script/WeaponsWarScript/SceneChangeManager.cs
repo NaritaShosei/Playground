@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneChangeManager : MonoBehaviour
 {
     AudioSource _selectAudio;
     public int _pushCount;
+    [SerializeField] GameObject _explanationText;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,5 +54,9 @@ public class SceneChangeManager : MonoBehaviour
     public void GetInGame()
     {
         SceneManager.LoadScene("WeaponsWar");
+    }
+    public void GetText()
+    {
+        _explanationText.SetActive(true);
     }
 }

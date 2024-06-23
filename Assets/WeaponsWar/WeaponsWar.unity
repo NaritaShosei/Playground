@@ -198,7 +198,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: e1b93020864064d4e87721fec642517c, type: 3}
     m_FontSize: 77
-    m_FontStyle: 0
+    m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 300
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: e1b93020864064d4e87721fec642517c, type: 3}
     m_FontSize: 93
-    m_FontStyle: 0
+    m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 106
@@ -923,7 +923,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: e1b93020864064d4e87721fec642517c, type: 3}
     m_FontSize: 95
-    m_FontStyle: 0
+    m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 190
