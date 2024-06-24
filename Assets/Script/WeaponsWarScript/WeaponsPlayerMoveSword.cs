@@ -47,9 +47,7 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
             _weaponsWarTimeManager.IsSurvive = false;
             IsSwordAlive = false;
             Instantiate(_effect,transform.position,Quaternion.identity);
-            Destroy(_effect,1.0f);
             Instantiate(_prefab, transform.position, Quaternion.identity);
-            Destroy(_prefab,1.0f);
             Destroy(gameObject);
             //Invoke("SceneChange", 1.2f);
         }

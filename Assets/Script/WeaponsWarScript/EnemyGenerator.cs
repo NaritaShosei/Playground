@@ -7,7 +7,7 @@ public class EnemyGenerator : MonoBehaviour
     [Header("敵のPrefab")]
     [SerializeField] private GameObject[] _enemyObjects;
     [Header("スポーンのインターバル")]
-    [SerializeField] public float _interval = 1;
+    public float _interval = 1;
     public float _timer = 0;
     [Header("スポーンの中心点")]
     [SerializeField] private Vector2 _spawnFieldCentorPoint;
@@ -15,6 +15,9 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] private Vector2 _spawnField;
     [SerializeField] Transform _playerTransform;
     public SpawnArea spawnArea;
+    [Header("インターバルを短くするまでの時間")]
+    [SerializeField] float _spawnTime = 5;
+    [SerializeField] float _plusSpawnTime = 5;
     public enum SpawnArea
     {
         up, down, left, right
@@ -43,10 +46,18 @@ public class EnemyGenerator : MonoBehaviour
     }
     private void Update()
     {
+        if (WeaponsWarTimeManager._timer >= _spawnTime)
+        {
+            if (_interval <= 0.3)
+            {
+                _interval -= 0.3f;
+            }
+        }
         _timer += Time.deltaTime;
-        if (_timer > _interval)
+        if (_timer >= _interval)
         {
             EnemySpawn();
+            _spawnTime += _plusSpawnTime;
             _timer = 0;
         }
     }
