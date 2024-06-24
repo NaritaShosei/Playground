@@ -15,10 +15,12 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
     float _timer = 0f;
     WeaponsHP damage;
     EnemyGenerator EnemyGenerator;
+    AudioSource _audioSource;
     // Start is called before the first frame update
     void Start()
     {
         damage = GetComponentInChildren<WeaponsHP>();
+        _audioSource = GetComponent<AudioSource>();
         _rigidbody = GetComponent<Rigidbody2D>();
         EnemyGenerator = GameObject.Find("Main Camera").GetComponent<EnemyGenerator>();
         _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -75,7 +77,9 @@ public class WeaponsEnemyMoveSpear : MonoBehaviour
 
     public void PlayAnim()
     {
+
         swordAnim.Play("SpearAttackAnim");
+        _audioSource.Play();
         _timer = 0f;
     }
     private void OnTriggerEnter2D(Collider2D collision)

@@ -18,11 +18,14 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
     bool _isAttackOnStart = true;
     WeaponsWarTimeManager _weaponsWarTimeManager;
     public static bool IsSwordAlive = true;
+    AudioSource _audio;
+    [SerializeField] GameObject _audioPrefab;
     void Start()
     {
         _weaponsWarTimeManager = GameObject.Find("Time").GetComponent<WeaponsWarTimeManager>();
         _damage = GetComponentInChildren<WeaponsHP>();
-
+        _audio = GetComponentInChildren<AudioSource>();
+        _audioPrefab = GetComponent<GameObject>();
         if (_isAttackOnStart)
         {
             _timer = _intrval;
@@ -35,6 +38,7 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
         {
             _timer = 0;
             swordAnim.Play("SwordAtackAnim");
+            _audio.Play();
         }
         transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * Time.deltaTime * _moveSpeed, 0f, 0f);
         transform.position += new Vector3(0, Input.GetAxisRaw("Vertical") * Time.deltaTime * _moveSpeed, 0f);
@@ -46,7 +50,7 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
             _damage.IsAlive = false;
             _weaponsWarTimeManager.IsSurvive = false;
             IsSwordAlive = false;
-            Instantiate(_effect,transform.position,Quaternion.identity);
+            Instantiate(_effect, transform.position, Quaternion.identity);
             Instantiate(_prefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
             //Invoke("SceneChange", 1.2f);
@@ -56,6 +60,13 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         WeaponsHP HP = collision.gameObject.GetComponent<WeaponsHP>();
+        if (_damage._hp >= 0)
+        {
+            if (HP.IsInvincible || _damage.IsInvincible)
+            {
+                Instantiate(_audioPrefab, transform.position, Quaternion.identity);
+            }
+        }
         if (HP != null)
         {
             if (HP.IsInvincible || HP.IsInvincible)

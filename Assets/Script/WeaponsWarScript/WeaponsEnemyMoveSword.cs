@@ -17,6 +17,7 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
     float _timer = 0f;
     WeaponsHP damage;
     EnemyGenerator EnemyGenerator;
+    AudioSource _audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +26,7 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
         //GameObject player = GameObject.Find("PlayerSword");
         _playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         EnemyGenerator = GameObject.Find("Main Camera").GetComponent<EnemyGenerator>();
-
-        //if (player.TryGetComponent<Transform>(out var transform))
-        //{
-        //    _playerTransform = transform;
-        //}
+        _audioSource = GetComponentInChildren<AudioSource>();
         if (Vector2.Distance(_playerTransform.position, this.transform.position) < 5)
         {
             Debug.Log("”j‰ó‚³‚ê‚½");
@@ -83,6 +80,7 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
     {
         swordAnim.Play("SwordAtackAnim");
         _timer = 0f;
+        _audioSource.Play();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -18,11 +18,12 @@ public class WeaponsPlayerMoveSpear : MonoBehaviour
     bool _isAttackOnStart = true;
     WeaponsWarTimeManager _weaponsWarTimeManager;
     public static bool IsSpearAlive = true;
+    AudioSource _audioSource;
     void Start()
     {
         _weaponsWarTimeManager = GameObject.Find("Time").GetComponent<WeaponsWarTimeManager>();
         _damage = GetComponentInChildren<WeaponsHP>();
-
+        _audioSource = GetComponentInChildren<AudioSource>();
         if (_isAttackOnStart)
         {
             _timer = _intrval;
@@ -35,6 +36,7 @@ public class WeaponsPlayerMoveSpear : MonoBehaviour
         {
             _timer = 0;
             spearAnim.Play("SpearAttackAnim");
+            _audioSource.Play();
         }
         transform.position += new Vector3(Input.GetAxisRaw("Horizontal") * Time.deltaTime * _moveSpeed, 0f, 0f);
         transform.position += new Vector3(0, Input.GetAxisRaw("Vertical") * Time.deltaTime * _moveSpeed, 0f);
@@ -47,9 +49,7 @@ public class WeaponsPlayerMoveSpear : MonoBehaviour
             _weaponsWarTimeManager.IsSurvive = false;
             IsSpearAlive = false;
             Instantiate(_effect, transform.position, Quaternion.identity);
-            Destroy(_effect, 1.0f);
             Instantiate(_prefab, transform.position, Quaternion.identity);
-            Destroy(_prefab, 1.0f);
             Destroy(gameObject);
         }
 
