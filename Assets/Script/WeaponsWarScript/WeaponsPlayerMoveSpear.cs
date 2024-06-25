@@ -19,6 +19,7 @@ public class WeaponsPlayerMoveSpear : MonoBehaviour
     WeaponsWarTimeManager _weaponsWarTimeManager;
     public static bool IsSpearAlive = true;
     AudioSource _audioSource;
+    [SerializeField] GameObject _audioPrefab;
     void Start()
     {
         _weaponsWarTimeManager = GameObject.Find("Time").GetComponent<WeaponsWarTimeManager>();
@@ -62,6 +63,7 @@ public class WeaponsPlayerMoveSpear : MonoBehaviour
             if (HP.IsInvincible)
             {
                 _damage.Damage(1);
+                Instantiate(_audioPrefab, transform.position, Quaternion.identity);
             }
         }
     }

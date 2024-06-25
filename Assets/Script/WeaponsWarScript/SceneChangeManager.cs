@@ -9,6 +9,8 @@ public class SceneChangeManager : MonoBehaviour
     AudioSource _selectAudio;
     public int _pushCount;
     [SerializeField] GameObject _explanationText;
+    [SerializeField] GameObject _textAndButton;
+    [SerializeField] GameObject _button;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,5 +60,13 @@ public class SceneChangeManager : MonoBehaviour
     public void GetText()
     {
         _explanationText.SetActive(true);
+        _button.SetActive(true);
+        _textAndButton.SetActive(false);
+    }
+    public void GetCanvas()
+    {
+        _explanationText.SetActive(false);
+        _button.SetActive(false);
+        _textAndButton.SetActive(true);
     }
 }

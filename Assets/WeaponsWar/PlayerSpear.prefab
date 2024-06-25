@@ -255,11 +255,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183ab8bef586ec241b7eb862406e0ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 10
+  _moveSpeed: 6
   spearAnim: {fileID: 6555084909539739565}
   _intrval: 1
   _effect: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
   _prefab: {fileID: 7288071866662378176, guid: ffcdd0b63cede044ca24c3de0da143f0, type: 3}
+  _audioPrefab: {fileID: 0}
 --- !u!82 &1928734470438250970
 AudioSource:
   m_ObjectHideFlags: 0

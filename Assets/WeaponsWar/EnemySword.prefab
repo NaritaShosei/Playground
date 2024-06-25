@@ -48,10 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1f53195d10eb345abdccf0d85fef44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyMoveSpeed: 5
+  _enemyMoveSpeed: 7
   _attackRange: 3
   swordAnim: {fileID: 2910134665909377092}
-  _interval: 3
   _audioPrefab: {fileID: 5110316375738055524, guid: c525cf672332c274595527b0f38f90e4,
     type: 3}
 --- !u!50 &6501066095050336270
