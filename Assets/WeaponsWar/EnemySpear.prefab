@@ -222,6 +222,8 @@ MonoBehaviour:
   _attackRange: 3
   swordAnim: {fileID: 2040524209645656820}
   _interval: 3
+  _audioPrefab: {fileID: 5110316375738055524, guid: c525cf672332c274595527b0f38f90e4,
+    type: 3}
 --- !u!50 &2688326946110155641
 Rigidbody2D:
   serializedVersion: 4
@@ -981,7 +983,6 @@ MonoBehaviour:
   _hp: 1
   IsInvincible: 0
   IsAlive: 0
-  _collisionAudio: {fileID: 5146455143191199889}
 --- !u!82 &5146455143191199889
 AudioSource:
   m_ObjectHideFlags: 0

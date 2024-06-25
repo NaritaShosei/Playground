@@ -18,6 +18,7 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
     WeaponsHP damage;
     EnemyGenerator EnemyGenerator;
     AudioSource _audioSource;
+    [SerializeField] GameObject _audioPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -90,5 +91,9 @@ public class WeaponsEnemyMoveSword : MonoBehaviour
         {
             damage.Damage(1);
         }
+    }
+    private void OnDestroy()
+    {
+        Instantiate(_audioPrefab,transform.position,Quaternion.identity);
     }
 }

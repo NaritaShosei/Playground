@@ -25,7 +25,6 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
         _weaponsWarTimeManager = GameObject.Find("Time").GetComponent<WeaponsWarTimeManager>();
         _damage = GetComponentInChildren<WeaponsHP>();
         _audio = GetComponentInChildren<AudioSource>();
-        _audioPrefab = GetComponent<GameObject>();
         if (_isAttackOnStart)
         {
             _timer = _intrval;
@@ -60,18 +59,12 @@ public class WeaponsPlayerMoveSword : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         WeaponsHP HP = collision.gameObject.GetComponent<WeaponsHP>();
-        if (_damage._hp >= 0)
-        {
-            if (HP.IsInvincible || _damage.IsInvincible)
-            {
-                Instantiate(_audioPrefab, transform.position, Quaternion.identity);
-            }
-        }
         if (HP != null)
         {
             if (HP.IsInvincible || HP.IsInvincible)
             {
                 _damage.Damage(1);
+                Instantiate(_audioPrefab, transform.position, Quaternion.identity);
             }
         }
     }
