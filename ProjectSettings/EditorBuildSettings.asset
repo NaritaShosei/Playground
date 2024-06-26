@@ -27,12 +27,12 @@ EditorBuildSettings:
     path: Assets/HanpukuYokotobi/Result.unity
     guid: e0edfbfaf2f506541b7ad12b5a11082c
   - enabled: 1
-    path: Assets/WeaponsWar/WeaponsWarTitle.unity
+    path: Assets/WeaponsBattle/WeaponsWarTitle.unity
     guid: 9a1f74e92b500274094a8c4c06f52025
   - enabled: 1
-    path: Assets/WeaponsWar/WeaponsWar.unity
+    path: Assets/WeaponsBattle/WeaponsWar.unity
     guid: e4f98cb58f9bf9246867f95ea5ab8809
   - enabled: 1
-    path: Assets/WeaponsWar/WeaponsWarResult.unity
+    path: Assets/WeaponsBattle/WeaponsWarResult.unity
     guid: 10190f6378aa96e4394020d3ade51b55
   m_configObjects: {}
