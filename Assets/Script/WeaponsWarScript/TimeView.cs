@@ -10,7 +10,7 @@ public class TimeView : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _timeText.text = WeaponsWarTimeManager._timer.ToString("F2") + " 秒間いきのびた！！";
+        _timeText.text =" " + WeaponsWarTimeManager._timer.ToString("F2") + " 秒間\n生き延びた！！";
         _scoreText.text = "得点 : " + ScoreManager._score.ToString();
     }
 

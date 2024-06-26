@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 6
   swordAnim: {fileID: 8297778619709549976}
-  _intrval: 1
+  _intrval: 1.2
   _effect: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
   _prefab: {fileID: 7288071866662378176, guid: ffcdd0b63cede044ca24c3de0da143f0, type: 3}
   _audioPrefab: {fileID: 5110316375738055524, guid: c525cf672332c274595527b0f38f90e4,

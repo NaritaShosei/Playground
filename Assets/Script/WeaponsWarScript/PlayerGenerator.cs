@@ -9,6 +9,7 @@ public class PlayerGenerator : MonoBehaviour
     [SerializeField] GameObject _playerSword;
     [SerializeField] GameObject _playerSpear;
     CinemachineVirtualCamera _cinemachine;
+    EnemyGenerator _enemyGenerator;
     public static PlayerAlive playerAlive;
     public enum PlayerAlive
     {
@@ -21,17 +22,20 @@ public class PlayerGenerator : MonoBehaviour
         WeaponsPlayerMoveSpear.IsSpearAlive = true;
         WeaponsPlayerMoveSword.IsSwordAlive = true;
         _cinemachine = GameObject.Find("Virtual Camera").GetComponent<CinemachineVirtualCamera>();
+        _enemyGenerator = GameObject.Find("Main Camera").GetComponent<EnemyGenerator>();
         if (PlayerGenerator.playerAlive == PlayerGenerator.PlayerAlive.sword)
         {
             WeaponsPlayerMoveSpear.IsSpearAlive = false;
             Destroy(_playerSpear);
             _cinemachine.Follow = _playerSword.transform;
+            _enemyGenerator._playerTransform = _playerSword.transform;
         }
         if (PlayerGenerator.playerAlive == PlayerGenerator.PlayerAlive.spear)
         {
             WeaponsPlayerMoveSword.IsSwordAlive = false;
             Destroy(_playerSword);
             _cinemachine.Follow = _playerSpear.transform;
+            _enemyGenerator._playerTransform = _playerSpear.transform;
         }
     }
 }

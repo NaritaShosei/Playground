@@ -11,6 +11,7 @@ public class SceneChangeManager : MonoBehaviour
     [SerializeField] GameObject _explanationText;
     [SerializeField] GameObject _textAndButton;
     [SerializeField] GameObject _button;
+    [SerializeField] float _invokeTime = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class SceneChangeManager : MonoBehaviour
         if (_pushCount == 0)
         {
             _selectAudio.Play();
-            Invoke(nameof(GetTitle), 1f);
+            Invoke(nameof(GetTitle), _invokeTime);
         }
         _pushCount = 1;
     }
@@ -36,7 +37,7 @@ public class SceneChangeManager : MonoBehaviour
         if (_pushCount == 0)
         {
             _selectAudio.Play();
-            Invoke(nameof(GetInGame), 1f);
+            Invoke(nameof(GetInGame), _invokeTime);
         }
         _pushCount = 1;
     }

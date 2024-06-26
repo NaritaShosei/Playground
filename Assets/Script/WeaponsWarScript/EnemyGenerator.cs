@@ -13,13 +13,15 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] private Vector2 _spawnFieldCentorPoint;
     [Header("スポーンの幅")]
     [SerializeField] private Vector2 _spawnField;
-    [SerializeField] Transform _playerTransform;
+    public Transform _playerTransform;
     public SpawnArea spawnArea;
     [Header("インターバルを短くするまでの時間")]
     [SerializeField] float _spawnTime = 5;
     [SerializeField] float _plusSpawnTime = 5;
     [SerializeField] float _minusInterval = 0.3f;
     [SerializeField] float _minusAttackInterval = 0.1f;
+    [SerializeField] float _intervalLine = 0.3f;
+    [SerializeField] float _attackIntervalLine = 1;
     public enum SpawnArea
     {
         up, down, left, right
@@ -44,18 +46,34 @@ public class EnemyGenerator : MonoBehaviour
             }
         }
         int randomEnemyIndex = Random.Range(0, _enemyObjects.Length);
-        Instantiate(_enemyObjects[randomEnemyIndex], spawnPoint, Quaternion.identity);
+        if (_playerTransform != null)
+        {
+
+            Instantiate(_enemyObjects[randomEnemyIndex], spawnPoint, Quaternion.identity);
+        }
     }
     private void Update()
     {
         if (WeaponsWarTimeManager._timer >= _spawnTime)
         {
-            if (_interval >= _minusInterval)
+            if (_interval >= _intervalLine)
             {
                 _spawnTime += _plusSpawnTime;
                 _interval -= _minusInterval;
                 WeaponsEnemyMoveSpear._interval -= _minusAttackInterval;
                 WeaponsEnemyMoveSword._interval -= _minusAttackInterval;
+                if (_interval <= _intervalLine)
+                {
+                    _interval = _intervalLine;
+                }
+                if (WeaponsEnemyMoveSpear._interval <= _attackIntervalLine)
+                {
+                    WeaponsEnemyMoveSpear._interval = _attackIntervalLine;
+                }
+                if (WeaponsEnemyMoveSword._interval <= _attackIntervalLine)
+                {
+                    WeaponsEnemyMoveSword._interval = _attackIntervalLine;
+                }
             }
         }
         _timer += Time.deltaTime;
